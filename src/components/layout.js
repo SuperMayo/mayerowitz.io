@@ -8,9 +8,29 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import styled from "styled-components"
 
+import { rhythm } from "../utils/typography"
 import Header from "./header"
-import "./layout.css"
+
+const Page = styled.div`
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+`
+
+const Container = styled.div`
+  margin: 0 auto;
+  max-width: 960px;
+  width: 100%;
+  flex: 1 0 auto;
+`
+
+const Footer = styled.footer`
+  text-align: center;
+  flex-shrink: 0;
+  padding: ${rhythm(1)};
+`
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -18,29 +38,30 @@ const Layout = ({ children }) => {
       site {
         siteMetadata {
           title
+          menuLinks {
+            name
+            link
+          }
         }
       }
     }
   `)
 
   return (
-    <>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
-      </div>
-    </>
+    <Page>
+      {console.log("rhythm:", rhythm)}
+      <Header
+        siteTitle={data.site.siteMetadata.title}
+        menuLinks={data.site.siteMetadata.menuLinks}
+      />
+      <Container>
+        <main style={{ flexGrow: 1 }}>{children}</main>
+      </Container>
+      <Footer>
+        © {new Date().getFullYear()}
+        {` `}Antoine Mayerowitz
+      </Footer>
+    </Page>
   )
 }
 
