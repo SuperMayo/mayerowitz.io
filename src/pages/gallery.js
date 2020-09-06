@@ -61,7 +61,7 @@ export const GalleryImages = graphql`
           relativePath
           birthTime(formatString: "Y.M.D")
           childImageSharp {
-            fluid(maxWidth: 500) {
+            fluid(maxWidth: 2000, quality: 100) {
               ...GatsbyImageSharpFluid
             }
           }
