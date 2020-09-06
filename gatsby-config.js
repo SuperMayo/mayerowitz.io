@@ -105,5 +105,6 @@ module.exports = {
         ],
       },
     },
+    `gatsby-plugin-fontawesome-css`,
   ],
 }
