@@ -7,6 +7,7 @@ module.exports = {
       github: `https://github.com/SuperMayo`,
       linkedin: `https://www.linkedin.com/in/antoinemayerowitz/`,
       twitter: `https://twitter.com/AntoineMyrwtz`,
+      instagram: `https://www.instagram.com/super_mayo/`,
     },
     menuLinks: [
       {
@@ -31,6 +32,12 @@ module.exports = {
         name: "Gallery",
         link: "/gallery",
       },
+      /**
+      {
+        name: "Misc",
+        link: "/misc",
+      }
+      */
     ],
   },
   plugins: [

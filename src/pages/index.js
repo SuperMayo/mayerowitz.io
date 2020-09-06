@@ -5,6 +5,7 @@ import {
   faGithubSquare,
   faLinkedin,
   faTwitterSquare,
+  faInstagramSquare,
 } from "@fortawesome/free-brands-svg-icons"
 import { useStaticQuery, graphql } from "gatsby"
 
@@ -55,6 +56,7 @@ const IndexPage = () => {
             twitter
             linkedin
             github
+            instagram
           }
         }
       }
@@ -95,6 +97,12 @@ const IndexPage = () => {
               target="_blank"
             >
               <FontAwesomeIcon icon={faLinkedin} />
+            </ExternalLink>
+            <ExternalLink
+              href={data.site.siteMetadata.externalLinks.instagram}
+              target="_blank"
+            >
+              <FontAwesomeIcon icon={faInstagramSquare} />
             </ExternalLink>
           </p>
         </Presentation>
