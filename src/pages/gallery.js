@@ -30,7 +30,6 @@ const SmallSamp = styled.samp`
 const Gallery = ({ data }) => (
   <Layout>
     <SEO title="Gallery" />
-    {console.log(data)}
     {data.allFile.edges.map(({ node }) => (
       <Container>
         <Zoom>
@@ -38,9 +37,9 @@ const Gallery = ({ data }) => (
         </Zoom>
         <Meta>
           <span>
-            <SmallSamp>{node.birthTime}</SmallSamp>
+            <SmallSamp>{node.name.split("_")[0]}</SmallSamp>
           </span>
-          <SmallSamp>{node.name}</SmallSamp>
+          <SmallSamp>{node.name.split("_")[1]}</SmallSamp>
         </Meta>
       </Container>
     ))}
@@ -53,7 +52,7 @@ export const GalleryImages = graphql`
   query MyQuery {
     allFile(
       filter: { sourceInstanceName: { eq: "gallery" } }
-      sort: { fields: birthTime, order: DESC }
+      sort: { fields: name, order: DESC }
     ) {
       edges {
         node {
