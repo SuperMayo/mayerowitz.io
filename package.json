@@ -13,7 +13,7 @@
     "@mdx-js/mdx": "^1.5.8",
     "@mdx-js/react": "^1.5.8",
     "babel-plugin-styled-components": "^1.10.7",
-    "gatsby": "^2.20.12",
+    "gatsby": "^2.24.53",
     "gatsby-image": "^2.3.2",
     "gatsby-plugin-manifest": "^2.3.3",
     "gatsby-plugin-mdx": "^1.1.7",
@@ -38,8 +38,7 @@
     "react-typography": "^0.16.19",
     "styled-components": "^5.1.0",
     "typescript": "^3.8.3",
-    "typography": "^0.16.19",
-    "zooming": "^2.1.1"
+    "typography": "^0.16.19"
   },
   "devDependencies": {
     "prettier": "^1.19.1"
