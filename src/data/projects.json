@@ -1,0 +1,28 @@
+[
+  {
+    "generative": [
+      {
+        "name": "Dunes penplot app",
+        "link": "generative-apps/dunes.html",
+        "description": "Web app for svg exports",
+        "date": 2021,
+        "external": false
+      },
+      {
+        "name": "Tiny Planets",
+        "link": "https://supermayo.github.io/tinyPlanets/",
+        "description": "Randomly generated planets in pixel art",
+        "date": 2021,
+        "external": true
+      }
+    ],
+    "web" : [
+      {
+        "name": "Rehpere",
+        "link": "https://Rehpere.org",
+        "description": "Website for the department of epistemology and history of economics at Sorbonne university.",
+        "date": 2018
+      } 
+    ]
+  }
+]
