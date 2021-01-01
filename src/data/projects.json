@@ -3,7 +3,7 @@
     "generative": [
       {
         "name": "Dunes penplot app",
-        "link": "generative-apps/dunes.html",
+        "link": "/generative-apps/dunes.html",
         "description": "Web app for svg exports",
         "date": 2021,
         "external": false
