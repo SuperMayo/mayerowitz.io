@@ -52,14 +52,21 @@ const MenuItem = styled.li`
 const NavBar = styled.div`
   max-height: 0;
   opacity: 0;
+  display: none;
   ${props =>
     props.burgerOn &&
     `
       margin: 1rem 0;
       max-height: 500px;
       opacity: 1;
+      display: inline;
       transition: opacity 0.5s ease;
       text-align: right;
+    `}
+  ${props =>
+    !props.burgerOn &&
+    `
+    display: none;
     `}
   @media (min-width: 960px) {
     opacity: 1;
