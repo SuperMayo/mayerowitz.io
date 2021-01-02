@@ -15,7 +15,7 @@ const Presentation = styled.div`
   }
 `
 
-const Research = () => {
+const Teaching = () => {
   const data = useStaticQuery(graphql`
     query TeachingQuery {
       teachingJson {
@@ -39,7 +39,7 @@ const Research = () => {
 
   return (
     <Layout>
-      <SEO title="Research" />
+      <SEO title="Teaching" />
       <Presentation>
         {data.teachingJson.teaching.map(
           ({ course, institution, ressources }) => (
@@ -63,7 +63,6 @@ const Research = () => {
                         {element.supplementName !== null && (
                           <React.Fragment>
                             <span> - </span>
-                            {console.log(element)}
                             <a
                               href={element.supplementLink}
                               target="_blank"
@@ -85,4 +84,4 @@ const Research = () => {
   )
 }
 
-export default Research
+export default Teaching

@@ -49,7 +49,6 @@ const Layout = ({ children }) => {
 
   return (
     <Page>
-      {console.log("rhythm:", rhythm)}
       <Header
         siteTitle={data.site.siteMetadata.title}
         menuLinks={data.site.siteMetadata.menuLinks}

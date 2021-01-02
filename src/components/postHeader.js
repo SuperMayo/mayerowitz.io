@@ -35,7 +35,6 @@ const PostHeader = ({
   path,
 }) => (
   <div>
-    {console.log(clickable)}
     <Meta>
       <span>
         {tags.map(tag => (
