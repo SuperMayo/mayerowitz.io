@@ -117,5 +117,12 @@ module.exports = {
       },
     },
     `gatsby-plugin-fontawesome-css`,
+    {
+      resolve: `gatsby-plugin-goatcounter`,
+      options: {
+        code: 'supermayo',
+        pixel: true,
+      },
+    },
   ],
 }

@@ -16,6 +16,7 @@
     "gatsby": "^2.24.53",
     "gatsby-image": "^2.3.2",
     "gatsby-plugin-fontawesome-css": "^1.0.0",
+    "gatsby-plugin-goatcounter": "^0.4.0",
     "gatsby-plugin-manifest": "^2.3.3",
     "gatsby-plugin-mdx": "^1.1.7",
     "gatsby-plugin-offline": "^3.1.2",
