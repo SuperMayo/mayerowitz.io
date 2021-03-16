@@ -28,10 +28,10 @@ const Research = () => (
       <h2>Work in Progress</h2>
       <List>
         <li>
-          Social networks in the Innovation Process. (With P. Aghion, P. Jackson
-          & X. Jaravel)
+          Social networks in the Innovation Process. (With P. Aghion, M. O. Jackson
+          & A. Tagade)
         </li>
-        <li>Is Venture Capital Fueling Market Concentration ? </li>
+        <li>Is Venture Capital Fueling Market Concentration? </li>
       </List>
     </Presentation>
   </Layout>
