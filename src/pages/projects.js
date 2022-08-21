@@ -45,25 +45,25 @@ const Projects = () => {
       <Container>
         <h2>Generative Art</h2>
         <ul>
-          {data.projectsJson.generative.map(({ name, link, description }) => (
+          {data.projectsJson.generative.map(({ name, link, description, date}) => (
             <li key={name}>
-              <a href={link} rel="noopener noreferrer">
+              <a href={link} rel="noopener noreferrer" target="_blank">
                 {name}
               </a>
               <br />
-              <SmallSamp>{description}</SmallSamp>
+              <SmallSamp>{date}. {description}</SmallSamp>
             </li>
           ))}
         </ul>
         <h2>Web</h2>
         <ul>
-          {data.projectsJson.web.map(({ name, link, description }) => (
+          {data.projectsJson.web.map(({ name, link, description, date }) => (
             <li key={name}>
-              <a key={name} href={link} rel="noopener noreferrer">
+              <a key={name} href={link} rel="noopener noreferrer" target="_blank">
                 {name}
               </a>
               <br />
-              <SmallSamp>{description}</SmallSamp>
+              <SmallSamp>{date}. {description}</SmallSamp>
             </li>
           ))}
         </ul>
