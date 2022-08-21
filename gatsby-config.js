@@ -96,26 +96,38 @@ module.exports = {
         path: `${__dirname}/content/blog`,
       },
     },
-    `gatsby-remark-images`,
-    `gatsby-remark-copy-linked-files`,
     {
-      resolve: `gatsby-plugin-mdx`,
+      resolve: `gatsby-source-filesystem`,
       options: {
-        defaultLayouts: {
-          default: require.resolve("./src/components/layout.js"),
-        },
-        plugins: [`gatsby-remark-images`, `gatsby-remark-copy-linked-files`],
-        gatsbyRemarkPlugins: [
+        name: `blog`,
+        path: `${__dirname}/src/pages`,
+      },
+    },
+    {
+      resolve: "gatsby-transformer-remark",
+      options: {
+        plugins: [
+          'gatsby-remark-relative-images',
           {
-            resolve: `gatsby-remark-images`,
+            resolve: "gatsby-remark-images",
             options: {
-              maxWidth: 600,
+              // It's important to specify the maxWidth (in pixels) of
+              // the content container as this plugin uses this as the
+              // base for generating different widths of each image.
+              maxWidth: 2048,
             },
           },
-          `gatsby-remark-copy-linked-files`,
+          {
+            resolve: "gatsby-remark-copy-linked-files",
+            options: {
+              destinationDir: "static",
+            },
+          },
         ],
       },
     },
+    `gatsby-remark-images`,
+    `gatsby-remark-copy-linked-files`,
     `gatsby-plugin-fontawesome-css`,
     {
       resolve: `gatsby-plugin-goatcounter`,
@@ -124,5 +136,6 @@ module.exports = {
         pixel: true,
       },
     },
-  ],
+    `gatsby-plugin-netlify-cms`
+  ]
 }

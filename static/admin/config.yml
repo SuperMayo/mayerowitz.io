@@ -1,0 +1,101 @@
+backend:
+  name: github
+  repo: supermayo/mayerowitz.io
+  branch: master
+  commit_messages:
+    create: "Create {{collection}} “{{slug}}”"
+    update: "Update {{collection}} “{{slug}}”"
+    delete: "Delete {{collection}} “{{slug}}”"
+    uploadMedia: "[skip ci] Upload “{{path}}”"
+    deleteMedia: "[skip ci] Delete “{{path}}”"
+
+media_folder: static/assets
+public_folder: /assets
+
+local_backend: true
+
+collections:
+  - name: blog
+    label: Blog
+    folder: content/blog
+    create: true
+    media_folder: ''
+    public_folder: ''
+    slug: 'index'
+    path: '{{year}}-{{month}}-{{day}}-{{slug}}/index'
+    preview_path: blog/{{slug}}
+    fields:
+      - { name: title, label: Title, widget: String }
+      - { name: published_at, label: Published At, widget: date }
+      - { name: body, label: Body, widget: markdown }
+        
+  - name: pages
+    label: pages
+    files:
+      - file: "src/pages/research/index.md"
+        label: "Research"
+        name: "research"
+        fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "research-page",
+            }
+          - {label: Title, name: title, widget: string}
+          - {label: Path, name: path, widget: string}
+          - {
+              label: Working Paper,
+              name: wp,
+              widget: object,
+              fields: 
+                [
+                  {label: Heading, name: heading, widget: string},
+                  {
+                    label: Items,
+                    name: items,
+                    widget: list,
+                    fields:
+                      [
+                        {label: Title, name: title, widget: string},
+                        {label: Authors, name: authors, widget: string},
+                        {label: Date, name: date, widget: string},
+                        {label: Url, name: url, widget: string},
+                        {label: Abstract, name: abstract, widget: string}
+                      ],
+                  },
+                ],
+            }
+          - {
+              label: Book Chapter,
+              name: book,
+              widget: object,
+              fields: 
+                [
+                  {label: Heading, name: heading, widget: string},
+                  {
+                    label: Items,
+                    name: items,
+                    widget: list,
+                    fields:
+                      [
+                        {label: Title, name: title, widget: string},
+                        {label: Authors, name: authors, widget: string},
+                        {label: Book, name: book, widget: string},
+                        {label: Year, name: year, widget: string},
+                        {label: Url, name: url, widget: string},
+                        {label: Abstract, name: abstract, widget: string}
+                      ],
+                  },
+                ],
+            }
+          - {
+              label: Work in Progress,
+              name: wip,
+              widget: object,
+              fields: 
+                [
+                  {label: Heading, name: heading, widget: string},      
+                  {label: Items, name: items, widget: list }
+                ],
+            }

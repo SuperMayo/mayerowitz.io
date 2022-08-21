@@ -1,11 +1,12 @@
 ---
 title: Research
 path: /research
+templateKey: research-page
 wp:
   heading: Working Paper
   items:
     - title: Innovation Networks and Business-Stealing.
-      authors: With Philippe Aghion, Matthew O. Jackson & Abhijit Tagade.
+      authors: With Philippe Aghion, Matthew O. Jackson & Abhijit Tagade
       date: May 2022
       url: http://dx.doi.org/10.2139/ssrn.3917979
       abstract: We use the universe of US Patent and Trademark Office (USPTO) data on
@@ -26,7 +27,7 @@ book:
   items:
     - title: A State-Space Model to Estimate Potential Growth in the Industrialized
         Countries
-      authors: With Thomas Brand and Gilles Dufrénot.
+      authors: With Thomas Brand and Gilles Dufrénot
       book: Recent Econometric Techniques for Macroeconomic and Financial Data
       year: "2021"
       url: "http://dx.doi.org/10.1007/978-3-030-54252-8_3 "
