@@ -4,7 +4,7 @@ import styled from "styled-components"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Img from "gatsby-image"
+import {getImage, GatsbyImage} from "gatsby-plugin-image"
 import Zoom from "react-medium-image-zoom"
 import "react-medium-image-zoom/dist/styles.css"
 import "./gallery.css"
@@ -33,7 +33,7 @@ const Gallery = ({ data }) => (
     {data.allFile.edges.map(({ node }) => (
       <Container>
         <Zoom>
-          <Img fluid={node.childImageSharp.fluid} />
+          <GatsbyImage image={getImage(node)} />
         </Zoom>
         <Meta>
           <span>
@@ -61,9 +61,10 @@ export const GalleryImages = graphql`
           relativePath
           birthTime(formatString: "Y.M.D")
           childImageSharp {
-            fluid(maxWidth: 2000, quality: 100) {
-              ...GatsbyImageSharpFluid
-            }
+            gatsbyImageData(
+              width: 500
+              placeholder: BLURRED
+            )
           }
         }
       }
