@@ -8,8 +8,8 @@ wp:
       authors: With Philippe Aghion, Matthew O. Jackson & Abhijit Tagade.
       date: May 2022
       url: http://dx.doi.org/10.2139/ssrn.3917979
-      abstract: "        We use the universe of US Patent and Trademark Office (USPTO)
-        data on patents and inventors from 1976 to 2017 to look at how inventors
+      abstract: We use the universe of US Patent and Trademark Office (USPTO) data on
+        patents and inventors from 1976 to 2017 to look at how inventors
         potential concern for business-stealing affects coauthorship on patents.
         First, we find an inverted-U shape in the fraction of coauthors that an
         inventor has per year who are new as a function number of other
@@ -20,8 +20,7 @@ wp:
         average price markups by firms in the area—leads to a higher drop in the
         fraction of new co-authors per patent after a breakthrough. We show how
         these patterns can be explained via a simple model in which inventors
-        trade off gains from collaboration against threats of business
-        stealing."
+        trade off gains from collaboration against threats of business stealing.
 book:
   heading: Book Chaper
   items:
