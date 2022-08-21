@@ -19,18 +19,24 @@ const Research = () => (
   <Layout>
     <SEO title="Research" />
     <Presentation>
-      <blockquote>
-        Not much to show here... but i'm workin on it !{" "}
-        <span role="img" aria-label="computer-scientist">
-          👨🏻‍💻
-        </span>
-      </blockquote>
+      <h2>Working Paper</h2>
+      <List>
+       <li>
+          <a href="http://dx.doi.org/10.2139/ssrn.3917979"  rel="noopener noreferrer" target="_blank">
+            Innovation Networks and Business-Stealing.</a> With Philippe Aghion, Matthew O. Jackson
+          & Abhijit Tagade). Updated: May 2022.
+        </li>
+      </List>
+      <h2>Book Chapter</h2>
+      <List>
+       <li>
+          <a href="http://dx.doi.org/10.1007/978-3-030-54252-8_3" rel="noopener noreferrer" target="_blank">
+          A State-Space Model to Estimate Potential Growth in the Industrialized Countries.</a> With Thomas Brand and Gilles Dufrénot.
+          <i> Recent Econometric Techniques for Macroeconomic and Financial Data</i>, 2021.
+        </li>
+      </List>
       <h2>Work in Progress</h2>
       <List>
-        <li>
-          Social networks in the Innovation Process. (With P. Aghion, M. O. Jackson
-          & A. Tagade)
-        </li>
         <li>Is Venture Capital Fueling Market Concentration? </li>
       </List>
     </Presentation>
