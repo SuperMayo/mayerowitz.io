@@ -1,0 +1,15 @@
+<script>
+    import ImageWrapper from "$lib/ImageWrapper.svelte";
+    let canvas;
+    export let height = 300;
+    export let width = 300;
+</script>
+
+<svg width={300} height={300} bind:this={canvas} class="font-mono m-auto">
+    <rect width="90%" height="90%" stroke="black" x="9%" y="2%" stroke-width="0.5%" fill="none" />
+    {#each {length: 8} as _, i}
+        <line x1={width * (0.05) + (i+1) * (width*0.1)} y1="5%" x2={width * (0.05) + (i+1) * (width*0.1)} y2="95%" stroke="black" stroke-width="0.5%" />
+        <line x1="5%" y1={height * (0.05) + (i+1) * (height*0.1)} x2="95%" y2={height * (0.05) + (i+1) * (height*0.1)} stroke="black" stroke-width="0.5%" />
+    {/each}
+    <text x="0%" y="99%">(0,0) </text>
+</svg>

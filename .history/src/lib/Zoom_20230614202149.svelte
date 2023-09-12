@@ -1,0 +1,9 @@
+<script lang="ts">
+    import "../app.css"
+    export let zoom : Boolean = false;
+</script>
+
+<div on:click={() => zoom = !zoom}
+    class = {`transition-all duration-200 ${zoom ? 'scale-200' : ''}`}>
+    <slot/>
+</div>

@@ -1,0 +1,12 @@
+<script lang="ts">
+    export let left_label: string = "";
+    export let right_label: string = "";
+</script>
+
+<div class = "max-w-[500px] m-auto">
+    <slot/>
+    <div class = "pt-half flex justify-between flex-row">
+        <span class = "font-mono">{left_label}</span>
+        <span class = "font-mono">{right_label}</span>
+    </div>
+</div>
