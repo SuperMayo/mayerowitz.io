@@ -10,7 +10,8 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       $$result,
       {
         left_label: image.date,
-        right_label: image.name
+        right_label: image.name,
+        maxWidth: "xl"
       },
       {},
       {

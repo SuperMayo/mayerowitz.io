@@ -2,14 +2,14 @@
     export let active: Boolean = false;
 </script>
 
-<button on:click on:mouseover on:focus on:mouseout on:blur
+<button on:click on:mouseover on:focus on:mouseout on:blur {...$$restProps}
     class = {`border-teal-700 border-2 px-half py-0 rounded-none
         hover:text-beige hover:bg-teal-600
         text-xs
-        drop-shadow-md uppercase hover:rotate-1
+        drop-shadow-sm uppercase
         transition-all duration-700 ease-in-out
         font-bold shadow-md
-        ${active ? "rotate-2 bg-teal-700 text-beige" : 'bg-beige text-teal-700'}`}>
+        ${active ? "bg-teal-700 text-beige" : 'bg-beige text-teal-700'}`}>
     <slot/>
 </button>
 

@@ -8,7 +8,7 @@
     const uniforms = {
         time: { value: 1 },
         resolution: { value: new Vector2() },
-        mouse: { value: new Vector2() },
+        mouse: { value: new Vector2(-100,-100) },
         u_step: { value: 0.0 },
     }
 

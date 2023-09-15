@@ -82,7 +82,7 @@ const metadata = {
   externalLinks
 };
 const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `${$$result.head += `<!-- HEAD_svelte-8czv8s_START --><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=Source+Sans+3:wght@400;700&family=Source+Serif+4&display=swap" rel="stylesheet"><!-- HEAD_svelte-8czv8s_END -->`, ""}
+  return `${$$result.head += `<!-- HEAD_svelte-15gtyfs_START --><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=Source+Sans+3:wght@400;700&family=Source+Serif+4:wght@400;700&display=swap" rel="stylesheet"><!-- HEAD_svelte-15gtyfs_END -->`, ""}
 
 <div class="flex flex-col min-h-screen max-w-5xl mx-auto w-11/12">${validate_component(Header, "Header").$$render(
     $$result,

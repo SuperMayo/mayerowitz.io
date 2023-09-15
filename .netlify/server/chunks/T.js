@@ -1,4 +1,4 @@
-import { g as getContext, c as create_ssr_component, d as subscribe, s as setContext, o as onDestroy, v as validate_component, h as get_current_component, i as onMount, j as compute_rest_props, k as get_store_value, t as tick, a as add_attribute } from "./index3.js";
+import { g as getContext, c as create_ssr_component, d as subscribe, s as setContext, o as onDestroy, v as validate_component, i as get_current_component, j as onMount, h as compute_rest_props, k as get_store_value, t as tick, a as add_attribute } from "./index3.js";
 import { w as writable, d as derived } from "./index2.js";
 import * as THREE from "three";
 import { PerspectiveCamera, Clock, Scene, PCFSoftShadowMap, WebGLRenderer, ColorManagement, sRGBEncoding, LinearEncoding, ACESFilmicToneMapping } from "three";

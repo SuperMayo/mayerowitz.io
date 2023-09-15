@@ -53,7 +53,7 @@ const Button = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     `border-teal-700 border-2 px-half py-0 rounded-none
         hover:text-beige hover:bg-teal-600
         text-xs
-        drop-shadow-md uppercase hover:rotate-1
+        drop-shadow-sm uppercase hover:rotate-1
         transition-all duration-700 ease-in-out
         font-bold shadow-md
         ${active ? "rotate-2 bg-teal-700 text-beige" : "bg-beige text-teal-700"}`,
@@ -119,7 +119,7 @@ const Paper = create_ssr_component(($$result, $$props, $$bindings, slots) => {
             <div><p class="text-sm font-mono font-thin">${escape(journal)}${year && journal ? `, ${escape(year)}` : ``}</p></div></div></div>
     <p>${abstract ? `${validate_component(Button, "Button").$$render($$result, { active: showAbstract }, {}, {
     default: () => {
-      return `${validate_component(TextIcon, "TextIcon").$$render($$result, { rotate: showAbstract }, {}, {
+      return `${validate_component(TextIcon, "TextIcon").$$render($$result, { alignMiddle: true, rotate: showAbstract }, {}, {
         default: () => {
           return `+`;
         }

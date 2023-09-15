@@ -1,9 +1,9 @@
 <script lang="ts">
     import { T, Canvas } from '@threlte/core';
     import {Vector2} from 'three';
-    import CodeMirror from "svelte-codemirror-editor";
     import {cpp} from "@codemirror/lang-cpp";
-    import {oneDark} from "@codemirror/theme-one-dark";
+
+    import CodeBlock from "$lib/CodeBlock.svelte";
 
     import Slider from './Slider.svelte';
     import IntersectionObserver from './IntersectionObserver.svelte';
@@ -40,6 +40,7 @@
 
     // Editor parameters
     export let editor : boolean = false;
+    export let folded : boolean = false;
 
     // Misc
     export let legend : string = "";
@@ -48,7 +49,7 @@
     const uniforms = {
         u_time: { value: 1 },
         u_resolution: { value: new Vector2(width, height)},
-        u_mouse: { value: new Vector2()},
+        u_mouse: { value: new Vector2(-1, 1)},
         u_slider: { value: 0.0 },
     };
 
@@ -79,40 +80,38 @@
         uniforms.u_mouse.value.y = (e.clientY - rect.top) / rect.height;
     }
 
+    // Hande touch events
+    function handleTouchMove(e) {
+        var rect = e.target.getBoundingClientRect();
+        uniforms.u_mouse.value.x = (e.touches[0].clientX - rect.left) / rect.width;
+        uniforms.u_mouse.value.y = (e.touches[0].clientY - rect.top) / rect.height;
+    }
+
     $: if (mouseCaptureDiv){
         if (mouseCapture){
             mouseCaptureDiv.addEventListener('mousemove', handleMouseMove);
+            mouseCaptureDiv.addEventListener('touchmove', (e) => {
+                e.preventDefault(); // Prevent scrolling
+            handleTouchMove(e);
+        });
         } else {
             mouseCaptureDiv.removeEventListener('mousemove', handleMouseMove);
+            mouseCaptureDiv.removeEventListener('touchmove', handleTouchMove);
         }
     }
 </script>
 
-{#if editor}
-    <div class="my-one w-full m-auto">
-        <CodeMirror bind:value={frag} lang={cpp()} extensions={[oneDark]} 
-        styles={{
-            "&": {
-                padding: "5px",
-                borderRadius: "10px",
-                filter: "drop-shadow(0 20px 13px rgb(0 0 0 / 0.03)) drop-shadow(0 8px 5px rgb(0 0 0 / 0.08))",
-                fontSize: "0.8rem",
-            },
-            ".cm-content": {
-                fontFamily: "'IBM Plex Mono'",
-            },
-            ".cm-gutters": {
-                borderRadius: "10px",
-            },
-        }}>
-        </CodeMirror>
-    </div>
-{/if}
-
+<div class="py-one">
 <IntersectionObserver on:intersection={handleShaderIntersection}>
-    <div class="flex justify-center my-one drop-shadow-md italic text-gray-500">
+    {#if editor}
+        <CodeBlock
+        bind:value={frag}
+        folded={folded}
+        lang={cpp()}/>
+    {/if}   
+    <div class="flex justify-center">
         <ImageWrapper right_label={legend} maxWidth={String(width)}>
-            <div bind:this={mouseCaptureDiv}>
+        <div bind:this={mouseCaptureDiv} class="drop-shadow-md">
             <Canvas size={{width: width, height: height}}>
                 {#if shaderIntersection}
                     <T.Mesh >
@@ -130,7 +129,7 @@
         </ImageWrapper>
     </div>
 </IntersectionObserver>
-
 {#if slider}
     <Slider min={sliderMin} max={sliderMax} step={sliderStep} markers={sliderMarkers} title={sliderTitle} bind:value={value} />
 {/if}
+</div>

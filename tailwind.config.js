@@ -1,10 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 export default {
     content: ['./src/**/*.{html,js,svelte,ts}'],
+    darkMode: "class",
     theme: {
       extend: {
         colors: {
-          'beige': '#fff9f0',
+          'beige': "#fff9f0",
         },
         spacing: {
           "0": "0px",

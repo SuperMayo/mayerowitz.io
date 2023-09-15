@@ -1,0 +1,2 @@
+Fall is the season of nobel prizes, what a good opportunity to play with some data!
+luckily for us, the nobel foundation provides a [nice API](https://nobelprize.readme.io/docs/prize) to access all past laureates.

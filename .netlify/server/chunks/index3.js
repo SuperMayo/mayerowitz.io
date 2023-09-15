@@ -38,6 +38,10 @@ function compute_rest_props(props, keys) {
 function null_to_empty(value) {
   return value == null ? "" : value;
 }
+function set_store_value(store, ret, value) {
+  store.set(value);
+  return ret;
+}
 function custom_event(type, detail, { bubbles = false, cancelable = false } = {}) {
   const e = document.createEvent("CustomEvent");
   e.initCustomEvent(type, bubbles, cancelable, detail);
@@ -234,18 +238,19 @@ export {
   escape as e,
   createEventDispatcher as f,
   getContext as g,
-  get_current_component as h,
-  onMount as i,
-  compute_rest_props as j,
+  compute_rest_props as h,
+  get_current_component as i,
+  onMount as j,
   get_store_value as k,
-  noop as l,
+  set_store_value as l,
   missing_component as m,
   null_to_empty as n,
   onDestroy as o,
-  safe_not_equal as p,
-  is_function as q,
+  noop as p,
+  safe_not_equal as q,
   run_all as r,
   setContext as s,
   tick as t,
+  is_function as u,
   validate_component as v
 };

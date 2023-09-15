@@ -1,38 +1,27 @@
-# create-svelte
+# Mayerowitz.io
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+This is the source code for my personal website, [mayerowitz.io](https://mayerowitz.io).
 
-## Creating a project
+## Development
 
-If you're seeing this, you've probably already done this step. Congrats!
-
-```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+This site is build using [sveltekit](https://kit.svelte.dev/). To run the site locally, run the following commands:
 
 ```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+yarn install
+yarn dev
 ```
 
-## Building
+## Deployment
 
-To create a production version of your app:
+This site is deployed using [Netlify](https://www.netlify.com/). The site is automatically deployed when changes are pushed to the `main` branch.
 
-```bash
-npm run build
-```
+## License
 
-You can preview the production build with `npm run preview`.
+This project is licensed under the GPL-3.0 License - see the [LICENSE](LICENSE) file for details.
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+## Acknowledgments
+
+- [SvelteKit](https://kit.svelte.dev/)
+- [TailwindCSS](https://tailwindcss.com/)
+- [Three.js](https://threejs.org/)
+- [Threlte](https://threlte.xyz/)

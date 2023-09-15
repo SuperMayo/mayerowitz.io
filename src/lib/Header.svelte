@@ -1,34 +1,28 @@
 <script lang="ts">
-    import Burger from './Burger.svelte';
+	import { page } from '$app/stores';
+  import Burger from './Burger.svelte';
+  import Logo from './Logo.svelte';
 
-    let burgerOn: boolean = false;
-    export let siteTitle: string;
-    export let menuLinks: {name: string, link: string}[] = [];
+  let burgerOn: boolean = false;
+  export let menuLinks: {name: string, link: string}[] = [];
 
-    function toggleBurger() {
-        burgerOn = !burgerOn;
-    }
+  function toggleBurger() {
+      burgerOn = !burgerOn;
+  }
 
-    function clickMenuItem() {
-        if (burgerOn) toggleBurger();
-    }
+  function clickMenuItem() {
+      if (burgerOn) toggleBurger();
+  }
+
+  // Get the current page path for the active menu item
+  $: path = $page.url.pathname;
 </script>
 
-<style lang="postcss">
- .nav-bar.burger-on {
-    @apply block translate-y-one max-h-screen opacity-100 transition-all duration-500 ease-in-out;
-  }
-
-   .nav-bar.burger-on .menu-item {
-    @apply mt-half transition-all duration-500 ease-in-out;
-  }
-</style>
-
-<header class="mb-two w-full">
-    <div class="flex flex-col justify-between items-center p-one max-w-screen-lg sm:flex-row">
+<header class="mb-two w-full blur-3">
+    <div class="flex flex-col justify-between items-center p-half max-w-screen-lg sm:flex-row">
       <div class="flex justify-between items-center w-full">
       <h1 class="m-0 font-medium">
-          <a href="/" class="text-black no-underline">{siteTitle}</a>
+          <a href="/" class="text-black no-underline"><Logo/></a>
       </h1>
       <button class="sm:hidden" tabIndex={0} on:click={toggleBurger}>
         <Burger click={burgerOn}/>
@@ -39,8 +33,9 @@
         <nav>
           <ul class="text-right m-0 sm:flex sm:justify-end sm:items-center sm:text-left">
             {#each menuLinks as link}
-              <li class="menu-item px-2 m-0">
-                /<a href={link.link} class="mt-quarter transition-all duration-500 ease-in-out lowercase"
+              <li class="menu-item p-half m-0">
+                <a href={link.link} class="mt-quarter lowercase"
+                  class:active={path == link.link}
                   on:click={clickMenuItem}>{link.name}</a>
               </li>
             {/each}
@@ -49,3 +44,17 @@
       </div>
     </div>
 </header>
+
+<style lang="postcss">
+  .nav-bar.burger-on {
+     @apply block translate-y-one max-h-screen opacity-100 ease-in-out;
+   }
+   
+   .menu-item > a::before {
+    content: "/";
+   }
+
+   .menu-item > a.active::before {
+    content: ">";
+   }
+ </style>

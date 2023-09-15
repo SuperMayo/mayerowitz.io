@@ -3,6 +3,7 @@
     import TextIcon from "$lib/TextIcon.svelte";
     import { fade, slide } from 'svelte/transition'
     import IconCite from "$lib/IconCite.svelte";
+    import Modal from "$lib/Modal.svelte";
 
     export let title: string;
     export let url: string = '';
@@ -15,10 +16,8 @@
     let showAbstract = false;
     let hoverCite = false;
     let citeLabel = "BiBTeX"
-    
-    const copyCiteToClipboard = (cite: string) => {
-        navigator.clipboard.writeText(cite);
-    }
+
+    let showModal = false;
 </script>
 
 <div class="mb-one">
@@ -32,7 +31,7 @@
                     {title}
                 {/if}
                 {#if authors}
-                    {authors}
+                    <br/>{authors}
                 {/if}
             </div>
             <div>
@@ -47,15 +46,15 @@
         <Button
         on:click={() => showAbstract = !showAbstract}
         active={showAbstract}>
-            <TextIcon rotate = {showAbstract}>+</TextIcon>abstract
+            <TextIcon alignMiddle={true} rotate = {showAbstract}>+</TextIcon>abstract
         </Button>
     {/if}
     {#if cite}
         <Button
             on:mouseover={() => hoverCite = true}
-            on:mouseout={() => {hoverCite = false; citeLabel = "BiBTeX"}}
+            on:mouseout={() => {hoverCite = false}}
             on:blur={() => {citeLabel = "BiBTeX"}}
-            on:click={() => {copyCiteToClipboard(cite); citeLabel = "copied!"}}
+            on:click={() => (showModal = true)}
             >
             <TextIcon alignMiddle = {true}><IconCite active = {hoverCite}/></TextIcon>
             {citeLabel}
@@ -71,6 +70,14 @@
         >{abstract}</p>
         </div>
     {/if}
+    <Modal bind:showModal>
+        <h4 slot="header" class="text-lg m-0">
+            Cite-me
+        </h4>
+        <p class="font-mono py-one">
+        {cite}
+        </p>
+    </Modal>
 </div>
 
 

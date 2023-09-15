@@ -5,6 +5,7 @@
 @layer base {
     *,*::before,*::after {
       @apply box-border;
+      color-scheme: only light;
     }
     html {
       scrollbar-gutter: stable both-edges;
@@ -34,7 +35,7 @@
       @apply text-teal-700;
     }
     a:hover,a:active {
-      @apply opacity-80 transition-opacity;
+      @apply text-red-500 transition-all duration-500 drop-shadow-sm;
     }
     li {
       @apply list-none ml-two;
@@ -63,7 +64,10 @@
       }
     }
     a {
-      @apply underline underline-offset-2 text-gray-800 decoration-teal-500;
+      @apply underline underline-offset-2 text-gray-800 decoration-teal-500 transition-all duration-300;
+    }
+    a:hover,a:active {
+      @apply decoration-red-500 transition-all duration-300;
     }
     ul {
       @apply list-disc list-outside pl-one font-serif mb-one;

@@ -9,7 +9,7 @@ const config = {
 	preprocess: [
 		vitePreprocess(),
 		mdsvex({
-			extensions: ['md'],
+			extensions: ['md', 'svx'],
 			layout: "./src/lib/PostLayout.svelte"
 		})
 	],
@@ -22,7 +22,7 @@ const config = {
 		noExternal: ['three'],
 	},
 
-	extensions: ['.svelte', '.md'],
+	extensions: ['.svelte', '.md', '.svx'],
 
 	kit: {
 		// adapter-auto only supports some environments, see https://kit.svelte.dev/docs/adapter-auto for a list.

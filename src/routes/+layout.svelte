@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=Source+Sans+3:wght@400;700&family=Source+Serif+4:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="favicon.png" />
 </svelte:head>
 
 <div class="flex flex-col min-h-screen max-w-5xl mx-auto w-11/12">
@@ -17,9 +18,6 @@
         siteTitle="{metadata.siteTitle}"
         menuLinks="{metadata.menuLinks}"
     />
-        <!--<div class="mx-auto my-one w-full flex-auto px-one">
-        <slot/>
-        </div> -->
-        <slot/>
+    <slot/>
     <Footer />
 </div>

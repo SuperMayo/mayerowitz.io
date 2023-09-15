@@ -39,11 +39,13 @@
 	"dependencies": {
 		"@codemirror/lang-cpp": "^6.0.2",
 		"@codemirror/theme-one-dark": "^6.1.2",
-		"@threlte/core": "^6.0.0-next.8",
-		"@threlte/extras": "^5.0.0-next.16",
+		"@giscus/svelte": "^2.3.0",
+		"@threlte/core": "^6.0.10",
+		"@threlte/extras": "^7.2.0",
 		"codemirror": "6.0.0",
+		"d3": "^7.8.5",
 		"medium-zoom": "^1.0.8",
 		"svelte-codemirror-editor": "^1.1.0",
-		"three": "^0.153.0"
+		"three": "^0.157.0"
 	}
 }
