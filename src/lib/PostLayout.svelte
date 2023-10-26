@@ -20,6 +20,9 @@
 <meta property="og:image" content={metadata.url + "/SEO/" + slug + "_og.png"}/>
 <meta property="og:type" content="article"/>
 <meta name="twitter:card" content="summary_large_image"/>
+<meta property="twitter:domain" content={metadata.url}/>
+<meta property="twitter:url" content={metadata.url + "/blog/" + slug}/>
+<meta name="twitter:title" content={title}/>
 <meta name="twitter:image" content={metadata.url + "/SEO/" + slug + "_twitter.png"}/>
 <meta name="twitter:creator" content={metadata.twitterUsername}/>
 <meta name="twitter:description" content={SEO_description}/>
