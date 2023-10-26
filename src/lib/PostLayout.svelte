@@ -17,14 +17,15 @@
 <meta property="og:title" content={title}/>
 <meta property="og:description" content={SEO_description} />
 <meta property="og:url" content={metadata.url + "/blog/" + slug}/>
-<meta property="og:image" content={metadata.url + "/SEO/" + slug + "_og.png"}/>
+<meta property="og:image" content={metadata.url + "/SEO/" + slug + ".png"}/>
 <meta property="og:type" content="article"/>
 <meta name="twitter:card" content="summary_large_image"/>
 <meta property="twitter:domain" content={metadata.url}/>
 <meta property="twitter:url" content={metadata.url + "/blog/" + slug}/>
 <meta name="twitter:title" content={title}/>
-<meta name="twitter:image" content={metadata.url + "/SEO/" + slug + "_twitter.png"}/>
+<meta name="twitter:image:src" content={metadata.url + "/SEO/" + slug + ".png"}/>
 <meta name="twitter:creator" content={metadata.twitterUsername}/>
+<meta name="twitter:site" content={metadata.twitterUsername}/>
 <meta name="twitter:description" content={SEO_description}/>
 </svelte:head>
 
