@@ -42,7 +42,7 @@ SEO_description: |
     import BlendFrag from "./fragments/blending.frag?raw";
     import Blob01Frag from "./fragments/blob01.frag?raw";
     import DitherFrag from "./fragments/dithering.frag?raw";
-    import SDFIllustration from "./lib/sdfIllustration.svelte";
+    import SDFIllustration from "./lib/SDFIllustration.svelte";
     import SDF from "./fragments/SDF.frag?raw";
     import CombiningFrag from "./fragments/combining.frag?raw";
 
