@@ -1,5 +1,5 @@
 ---
-title: "A Journey Into Shader"
+title: "A Journey Into Shaders"
 slug: a-journey-into-shaders
 subtitle: "Part I: The blob"
 date: "2023-10-27"

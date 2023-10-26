@@ -13,9 +13,9 @@
 <svelte:head>
 <title>{title}</title>
 <meta name="author" content={metadata.author}/>
-<meta name="description" content="{SEO_description}" />
+<meta name="description" content={SEO_description} />
 <meta property="og:title" content={title}/>
-<meta property="og:description" content="{SEO_description}" />
+<meta property="og:description" content={SEO_description} />
 <meta property="og:url" content={metadata.url + "/blog/" + slug}/>
 <meta property="og:image" content={metadata.url + "/SEO/" + slug + "_og.png"}/>
 <meta property="og:type" content="article"/>
