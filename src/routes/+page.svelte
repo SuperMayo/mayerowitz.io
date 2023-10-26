@@ -14,7 +14,7 @@
     <p>
       I'm a French data scientist, currently living in Paris. I hold
       a PhD in economics. My current focus is on data science,
-      interactive web stories, and generative design.
+      interactive stories, and generative design.
     </p>
     <p>
       You can also find me there:
