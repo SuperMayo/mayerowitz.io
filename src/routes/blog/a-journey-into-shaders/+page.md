@@ -99,7 +99,7 @@ I hear about shaders all the time, when scrolling generative artists on <strike>
 
 ## Shaders: the good, the bad and the ugly
 
-If you're into video games, you've likely heard of shaders. They're the magic behind enhancing [lighting](https://lettier.github.io/3d-game-shaders-for-beginners/normal-mapping.html), conjuring up [special effects](https://webglfundamentals.org/webgl/lessons/webgl-fog.html), and even generating [cartoonish looks](https://en.wikipedia.org/wiki/Cel_shading) (yes, that's why there's a 'shade' in 'cell shading'). In a way, shaders is what makes modern games look so good when compared to their '90s counterparts. But what exactly is a shader?
+If you're into video games, you've likely heard of shaders. They're the magic behind enhancing [lighting](https://lettier.github.io/3d-game-shaders-for-beginners/normal-mapping.html), conjuring up [special effects](https://webglfundamentals.org/webgl/lessons/webgl-fog.html), and even generating [cartoonish looks](https://en.wikipedia.org/wiki/Cel_shading) (yes, that's why there's a 'shade' in 'cel shading'). In a way, shaders is what makes modern games look so good when compared to their '90s counterparts. But what exactly is a shader?
 
 Let's start simple: A shader is a small program running on your GPU that takes, at the very least, pixel coordinates as input and spits out a color as output. The reason why they are so popular in video games and computer graphics is that they are *extremly* fast. Their secret sauce? *Parallelization*. These programs are designed to work on multiple pixels at the same time, making them ridiculously efficient.
 
