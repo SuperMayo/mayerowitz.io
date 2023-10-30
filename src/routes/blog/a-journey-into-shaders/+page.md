@@ -224,7 +224,7 @@ To create an appealing effect, we would like the shapes to blend smoothly togeth
 
 ## I Like to Move it
 
-We can pass any arbitrary variable to our shader, much like the slider you've played with in this article. To get closer to our goal, we need to animate the circles. Doing so is as simple as feeding the shader with a time uniform that can then be used to defin the circles' positions. Here I generate my time uniform `u_time` through javascript and then use it as an input in my shader to control my SDFs. The shader will refresh 60 times per second by default, each time with a new `u_time` value, creating a smooth animation. With a few extra balls and a bit of parameter tweeking, we end up with a cute blobby shape.
+We can pass any arbitrary variable to our shader, much like the slider you've played with in this article. To get closer to our goal, we need to animate the circles. Doing so is as simple as feeding the shader with a time uniform that can then be used to define the circles' positions. Here I generate my time uniform `u_time` through javascript and then use it as an input in my shader to control my SDFs. The shader will refresh 60 times per second by default, each time with a new `u_time` value, creating a smooth animation. With a few extra balls and a bit of parameter tweeking, we end up with a cute blobby shape.
 
 > To make the blob oscillating, we can use periodic functions (e.g. sin,cos) to control each balls.
 
