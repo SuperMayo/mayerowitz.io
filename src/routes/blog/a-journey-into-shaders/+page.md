@@ -84,7 +84,7 @@ SEO_description: |
 
 What if I told you that it could takes just few lines of code to create graphics as simple as gradients or as complex as rain effects? Welcome to the world of shaders!
 
-I've been fascinated by shaders for a couple of years. but each time I attempted to dive into the subject, I felt like I was learning to read and write all over again -- it was overwhelming.
+I've been fascinated by shaders for a couple of years, but each time I attempted to dive into the subject, I felt like I was learning to read and write all over again -- it was overwhelming.
 When I transitioned this website to [Svelte](https://kit.svelte.dev/), I saw an opportunity to replace a simple CSS animation on my homepage with a shader-based animation. The original CSS animation manipulated the `border-radius` property to produce a calm and minimalist animation, illustrated below.
 
 <div class = "py-one">
