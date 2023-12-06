@@ -1,0 +1,1004 @@
+[
+  {
+    "name": "Mario",
+    "eq_id": 1,
+    "img_url": "https://mario.wiki.gallery/images/thumb/d/d9/MK8_Mario_Icon.png/64px-MK8_Mario_Icon.png",
+    "img": "https://mario.wiki.gallery/images/thumb/d/d9/MK8_Mario_Icon.png/64px-MK8_Mario_Icon.png",
+    "name.1": "Mario",
+    "type": "driver",
+    "one": 1,
+    "Weight": 6,
+    "Speed": 7,
+    "Handling": 4,
+    "Acceleration": 2,
+    "mini_turbo": 3,
+    "off_road": 2,
+    "equivalences": [
+      {
+        "img_url": "https://mario.wiki.gallery/images/thumb/a/a8/MK8_Ludwig_Icon.png/64px-MK8_Ludwig_Icon.png",
+        "name": "Ludwig"
+      },
+      {
+        "img_url": "https://mario.wiki.gallery/images/thumb/b/bb/Mii_MK8.png/64px-Mii_MK8.png",
+        "name": "Mii (medium)"
+      }
+    ]
+  },
+  {
+    "name": "Luigi",
+    "eq_id": 2,
+    "img_url": "https://mario.wiki.gallery/images/thumb/5/51/MK8_Luigi_Icon.png/64px-MK8_Luigi_Icon.png",
+    "img": "https://mario.wiki.gallery/images/thumb/5/51/MK8_Luigi_Icon.png/64px-MK8_Luigi_Icon.png",
+    "name.1": "Luigi",
+    "type": "driver",
+    "one": 1,
+    "Weight": 6,
+    "Speed": 7,
+    "Handling": 5,
+    "Acceleration": 2,
+    "mini_turbo": 3,
+    "off_road": 1,
+    "equivalences": [
+      {
+        "img_url": "https://mario.wiki.gallery/images/thumb/d/dd/MK8_Iggy_Icon.png/64px-MK8_Iggy_Icon.png",
+        "name": "Iggy"
+      }
+    ]
+  },
+  {
+    "name": "Peach",
+    "eq_id": 3,
+    "img_url": "https://mario.wiki.gallery/images/thumb/c/c2/MK8_Peach_Icon.png/64px-MK8_Peach_Icon.png",
+    "img": "https://mario.wiki.gallery/images/thumb/c/c2/MK8_Peach_Icon.png/64px-MK8_Peach_Icon.png",
+    "name.1": "Peach",
+    "type": "driver",
+    "one": 1,
+    "Weight": 4,
+    "Speed": 6,
+    "Handling": 5,
+    "Acceleration": 3,
+    "mini_turbo": 4,
+    "off_road": 3,
+    "equivalences": [
+      {
+        "img_url": "https://mario.wiki.gallery/images/thumb/3/32/MK8_Daisy_Icon.png/64px-MK8_Daisy_Icon.png",
+        "name": "Daisy"
+      },
+      {
+        "img_url": "https://mario.wiki.gallery/images/thumb/9/91/MK8_Yoshi_Icon.png/64px-MK8_Yoshi_Icon.png",
+        "name": "Yoshi"
+      }
+    ]
+  },
+  {
+    "name": "Toad",
+    "eq_id": 4,
+    "img_url": "https://mario.wiki.gallery/images/thumb/4/45/MK8_Toad_Icon.png/64px-MK8_Toad_Icon.png",
+    "img": "https://mario.wiki.gallery/images/thumb/4/45/MK8_Toad_Icon.png/64px-MK8_Toad_Icon.png",
+    "name.1": "Toad",
+    "type": "driver",
+    "one": 1,
+    "Weight": 3,
+    "Speed": 4,
+    "Handling": 7,
+    "Acceleration": 4,
+    "mini_turbo": 4,
+    "off_road": 4,
+    "equivalences": [
+      {
+        "img_url": "https://mario.wiki.gallery/images/thumb/7/7f/MK8_ShyGuy_Icon.png/64px-MK8_ShyGuy_Icon.png",
+        "name": "Shy Guy"
+      },
+      {
+        "img_url": "https://mario.wiki.gallery/images/thumb/c/c2/MK8_Larry_Icon.png/64px-MK8_Larry_Icon.png",
+        "name": "Larry"
+      }
+    ]
+  },
+  {
+    "name": "Toadette",
+    "eq_id": 5,
+    "img_url": "https://mario.wiki.gallery/images/thumb/8/8e/MK8_Toadette_Icon.png/64px-MK8_Toadette_Icon.png",
+    "img": "https://mario.wiki.gallery/images/thumb/8/8e/MK8_Toadette_Icon.png/64px-MK8_Toadette_Icon.png",
+    "name.1": "Toadette",
+    "type": "driver",
+    "one": 1,
+    "Weight": 2,
+    "Speed": 3,
+    "Handling": 7,
+    "Acceleration": 5,
+    "mini_turbo": 4,
+    "off_road": 2,
+    "equivalences": [
+      {
+        "img_url": "https://mario.wiki.gallery/images/thumb/d/d9/MK8_Wendy_Icon.png/64px-MK8_Wendy_Icon.png",
+        "name": "Wendy"
+      },
+      {
+        "img_url": "https://mario.wiki.gallery/images/thumb/2/20/MK8_Isabelle_Icon.png/64px-MK8_Isabelle_Icon.png",
+        "name": "Isabelle"
+      }
+    ]
+  },
+  {
+    "name": "Koopa Troopa",
+    "eq_id": 6,
+    "img_url": "https://mario.wiki.gallery/images/thumb/b/bc/MK8_Koopa_Icon.png/64px-MK8_Koopa_Icon.png",
+    "img": "https://mario.wiki.gallery/images/thumb/b/bc/MK8_Koopa_Icon.png/64px-MK8_Koopa_Icon.png",
+    "name.1": "Koopa Troopa",
+    "type": "driver",
+    "one": 1,
+    "Weight": 2,
+    "Speed": 3,
+    "Handling": 8,
+    "Acceleration": 4,
+    "mini_turbo": 4,
+    "off_road": 5,
+    "equivalences": [
+      {
+        "img_url": "https://mario.wiki.gallery/images/thumb/7/7d/MK8_Lakitu_Icon.png/64px-MK8_Lakitu_Icon.png",
+        "name": "Lakitu"
+      },
+      {
+        "img_url": "https://mario.wiki.gallery/images/thumb/2/26/MK8_Bowser_Jr_Icon.png/64px-MK8_Bowser_Jr_Icon.png",
+        "name": "Bowser Jr."
+      }
+    ]
+  },
+  {
+    "name": "Bowser",
+    "eq_id": 7,
+    "img_url": "https://mario.wiki.gallery/images/thumb/4/47/MK8_Bowser_Icon.png/64px-MK8_Bowser_Icon.png",
+    "img": "https://mario.wiki.gallery/images/thumb/4/47/MK8_Bowser_Icon.png/64px-MK8_Bowser_Icon.png",
+    "name.1": "Bowser",
+    "type": "driver",
+    "one": 1,
+    "Weight": 10,
+    "Speed": 10,
+    "Handling": 0,
+    "Acceleration": 0,
+    "mini_turbo": 0,
+    "off_road": 0,
+    "equivalences": [
+      {
+        "img_url": "https://mario.wiki.gallery/images/thumb/7/72/MK8_Morton_Icon.png/64px-MK8_Morton_Icon.png",
+        "name": "Morton"
+      }
+    ]
+  },
+  {
+    "name": "Donkey Kong",
+    "eq_id": 8,
+    "img_url": "https://mario.wiki.gallery/images/thumb/0/08/MK8_DKong_Icon.png/64px-MK8_DKong_Icon.png",
+    "img": "https://mario.wiki.gallery/images/thumb/0/08/MK8_DKong_Icon.png/64px-MK8_DKong_Icon.png",
+    "name.1": "Donkey Kong",
+    "type": "driver",
+    "one": 1,
+    "Weight": 8,
+    "Speed": 9,
+    "Handling": 2,
+    "Acceleration": 1,
+    "mini_turbo": 1,
+    "off_road": 0,
+    "equivalences": [
+      {
+        "img_url": "https://mario.wiki.gallery/images/thumb/7/78/MK8_Waluigi_Icon.png/64px-MK8_Waluigi_Icon.png",
+        "name": "Waluigi"
+      },
+      {
+        "img_url": "https://mario.wiki.gallery/images/thumb/3/3e/MK8_Roy_Icon.png/64px-MK8_Roy_Icon.png",
+        "name": "Roy"
+      }
+    ]
+  },
+  {
+    "name": "Wario",
+    "eq_id": 9,
+    "img_url": "https://mario.wiki.gallery/images/thumb/c/c2/MK8_Wario_Icon.png/64px-MK8_Wario_Icon.png",
+    "img": "https://mario.wiki.gallery/images/thumb/c/c2/MK8_Wario_Icon.png/64px-MK8_Wario_Icon.png",
+    "name.1": "Wario",
+    "type": "driver",
+    "one": 1,
+    "Weight": 9,
+    "Speed": 10,
+    "Handling": 1,
+    "Acceleration": 0,
+    "mini_turbo": 0,
+    "off_road": 1,
+    "equivalences": [
+      {
+        "img_url": "https://mario.wiki.gallery/images/thumb/2/29/MK8_Dry_Bowser_Icon.png/64px-MK8_Dry_Bowser_Icon.png",
+        "name": "Dry Bowser"
+      }
+    ]
+  },
+  {
+    "name": "Rosalina",
+    "eq_id": 10,
+    "img_url": "https://mario.wiki.gallery/images/thumb/8/89/MK8_Rosalina_Icon.png/64px-MK8_Rosalina_Icon.png",
+    "img": "https://mario.wiki.gallery/images/thumb/8/89/MK8_Rosalina_Icon.png/64px-MK8_Rosalina_Icon.png",
+    "name.1": "Rosalina",
+    "type": "driver",
+    "one": 1,
+    "Weight": 7,
+    "Speed": 8,
+    "Handling": 3,
+    "Acceleration": 1,
+    "mini_turbo": 2,
+    "off_road": 3,
+    "equivalences": [
+      {
+        "img_url": "https://mario.wiki.gallery/images/thumb/e/e8/MK8_Link_Icon.png/64px-MK8_Link_Icon.png",
+        "name": "Link"
+      },
+      {
+        "img_url": "https://mario.wiki.gallery/images/thumb/1/1d/MK8DX_King_Boo_Icon.png/64px-MK8DX_King_Boo_Icon.png",
+        "name": "King Boo"
+      },
+      {
+        "img_url": "https://mario.wiki.gallery/images/thumb/9/9e/MK8D_BotW_Link_Icon.png/64px-MK8D_BotW_Link_Icon.png",
+        "name": "Link (Breath of the Wild)"
+      }
+    ]
+  },
+  {
+    "name": "Metal Mario",
+    "eq_id": 11,
+    "img_url": "https://mario.wiki.gallery/images/thumb/e/e3/MK8_MMario_Icon.png/64px-MK8_MMario_Icon.png",
+    "img": "https://mario.wiki.gallery/images/thumb/e/e3/MK8_MMario_Icon.png/64px-MK8_MMario_Icon.png",
+    "name.1": "Metal Mario",
+    "type": "driver",
+    "one": 1,
+    "Weight": 10,
+    "Speed": 8,
+    "Handling": 3,
+    "Acceleration": 1,
+    "mini_turbo": 1,
+    "off_road": 1,
+    "equivalences": [
+      {
+        "img_url": "https://mario.wiki.gallery/images/thumb/0/0d/MK8_PGPeach_Icon.png/64px-MK8_PGPeach_Icon.png",
+        "name": "Pink Gold Peach"
+      },
+      {
+        "img_url": "https://mario.wiki.gallery/images/thumb/c/c8/MK8DX_Gold_Mario_Icon.png/64px-MK8DX_Gold_Mario_Icon.png",
+        "name": "Gold Mario"
+      }
+    ]
+  },
+  {
+    "name": "Baby Mario",
+    "eq_id": 12,
+    "img_url": "https://mario.wiki.gallery/images/thumb/d/d2/MK8_BabyMario_Icon.png/64px-MK8_BabyMario_Icon.png",
+    "img": "https://mario.wiki.gallery/images/thumb/d/d2/MK8_BabyMario_Icon.png/64px-MK8_BabyMario_Icon.png",
+    "name.1": "Baby Mario",
+    "type": "driver",
+    "one": 1,
+    "Weight": 1,
+    "Speed": 2,
+    "Handling": 8,
+    "Acceleration": 5,
+    "mini_turbo": 5,
+    "off_road": 4,
+    "equivalences": [
+      {
+        "img_url": "https://mario.wiki.gallery/images/thumb/a/aa/MK8_BabyLuigi_Icon.png/64px-MK8_BabyLuigi_Icon.png",
+        "name": "Baby Luigi"
+      },
+      {
+        "img_url": "https://mario.wiki.gallery/images/thumb/3/3f/MK8DX_Dry_Bones_Icon.png/64px-MK8DX_Dry_Bones_Icon.png",
+        "name": "Dry Bones"
+      }
+    ]
+  },
+  {
+    "name": "Baby Peach",
+    "eq_id": 13,
+    "img_url": "https://mario.wiki.gallery/images/thumb/3/3d/MK8_BabyPeach_Icon.png/64px-MK8_BabyPeach_Icon.png",
+    "img": "https://mario.wiki.gallery/images/thumb/3/3d/MK8_BabyPeach_Icon.png/64px-MK8_BabyPeach_Icon.png",
+    "name.1": "Baby Peach",
+    "type": "driver",
+    "one": 1,
+    "Weight": 0,
+    "Speed": 1,
+    "Handling": 10,
+    "Acceleration": 4,
+    "mini_turbo": 5,
+    "off_road": 5,
+    "equivalences": [
+      {
+        "img_url": "https://mario.wiki.gallery/images/thumb/4/43/MK8_BabyDaisy_Icon.png/64px-MK8_BabyDaisy_Icon.png",
+        "name": "Baby Daisy"
+      }
+    ]
+  },
+  {
+    "name": "Baby Rosalina",
+    "eq_id": 14,
+    "img_url": "https://mario.wiki.gallery/images/thumb/0/09/MK8_BabyRosalina_Icon.png/64px-MK8_BabyRosalina_Icon.png",
+    "img": "https://mario.wiki.gallery/images/thumb/0/09/MK8_BabyRosalina_Icon.png/64px-MK8_BabyRosalina_Icon.png",
+    "name.1": "Baby Rosalina",
+    "type": "driver",
+    "one": 1,
+    "Weight": 0,
+    "Speed": 1,
+    "Handling": 9,
+    "Acceleration": 5,
+    "mini_turbo": 5,
+    "off_road": 3,
+    "equivalences": [
+      {
+        "img_url": "https://mario.wiki.gallery/images/thumb/f/fc/MK8_Lemmy_Icon.png/64px-MK8_Lemmy_Icon.png",
+        "name": "Lemmy"
+      }
+    ]
+  },
+  {
+    "name": "Tanooki Mario",
+    "eq_id": 15,
+    "img_url": "https://mario.wiki.gallery/images/thumb/a/a2/MK8_Tanooki_Mario_Icon.png/64px-MK8_Tanooki_Mario_Icon.png",
+    "img": "https://mario.wiki.gallery/images/thumb/a/a2/MK8_Tanooki_Mario_Icon.png/64px-MK8_Tanooki_Mario_Icon.png",
+    "name.1": "Tanooki Mario",
+    "type": "driver",
+    "one": 1,
+    "Weight": 5,
+    "Speed": 6,
+    "Handling": 5,
+    "Acceleration": 3,
+    "mini_turbo": 3,
+    "off_road": 1,
+    "equivalences": [
+      {
+        "img_url": "https://mario.wiki.gallery/images/thumb/1/16/VillagerMale-Icon-MK8.png/64px-VillagerMale-Icon-MK8.png",
+        "name": "Villager (male)"
+      },
+      {
+        "img_url": "https://mario.wiki.gallery/images/thumb/3/3c/MK8DX_Male_Inkling_Icon.png/64px-MK8DX_Male_Inkling_Icon.png",
+        "name": "Inkling Boy"
+      }
+    ]
+  },
+  {
+    "name": "Cat Peach",
+    "eq_id": 16,
+    "img_url": "https://mario.wiki.gallery/images/thumb/a/ad/MK8_Cat_Peach_Icon.png/64px-MK8_Cat_Peach_Icon.png",
+    "img": "https://mario.wiki.gallery/images/thumb/a/ad/MK8_Cat_Peach_Icon.png/64px-MK8_Cat_Peach_Icon.png",
+    "name.1": "Cat Peach",
+    "type": "driver",
+    "one": 1,
+    "Weight": 3,
+    "Speed": 5,
+    "Handling": 6,
+    "Acceleration": 4,
+    "mini_turbo": 3,
+    "off_road": 3,
+    "equivalences": [
+      {
+        "img_url": "https://mario.wiki.gallery/images/thumb/c/c3/VillagerFemale-Icon-MK8.png/64px-VillagerFemale-Icon-MK8.png",
+        "name": "Villager (female)"
+      },
+      {
+        "img_url": "https://mario.wiki.gallery/images/thumb/b/b9/MK8DX_Female_Inkling_Icon.png/64px-MK8DX_Female_Inkling_Icon.png",
+        "name": "Inkling Girl"
+      }
+    ]
+  },
+  {
+    "name": "Standard Kart",
+    "eq_id": 1,
+    "img_url": "https://mario.wiki.gallery/images/thumb/f/f6/MK8D_Birdo_Icon.png/64px-MK8D_Birdo_Icon.png",
+    "type": "body",
+    "one": 1,
+    "Weight": 2,
+    "Speed": 3,
+    "Handling": 2.75,
+    "Acceleration": 4,
+    "mini_turbo": 5,
+    "off_road": 3,
+    "equivalences": [
+      {
+        "img_url": "https://mario.wiki.gallery/images/thumb/f/fe/SportBikeBodyMK8.png/100px-SportBikeBodyMK8.png",
+        "name": "The Duke"
+      },
+      {
+        "img_url": "https://mario.wiki.gallery/images/thumb/2/25/W25SilverArrow-MK8.png/100px-W25SilverArrow-MK8.png",
+        "name": "300 SL Roadster"
+      }
+    ]
+  },
+  {
+    "name": "Pipe Frame",
+    "eq_id": 2,
+    "img_url": "https://mario.wiki.gallery/images/thumb/0/05/StandardKartBodyMK8.png/100px-StandardKartBodyMK8.png",
+    "type": "body",
+    "one": 1,
+    "Weight": 1,
+    "Speed": 1.5,
+    "Handling": 3.75,
+    "Acceleration": 6,
+    "mini_turbo": 6,
+    "off_road": 4,
+    "equivalences": [
+      {
+        "img_url": "https://mario.wiki.gallery/images/thumb/3/31/FlameRiderBodyMK8.png/100px-FlameRiderBodyMK8.png",
+        "name": "Varmint"
+      },
+      {
+        "img_url": "https://mario.wiki.gallery/images/thumb/c/cd/MK8PWing.png/100px-MK8PWing.png",
+        "name": "City Tripper"
+      }
+    ]
+  },
+  {
+    "name": "Mach 8",
+    "eq_id": 3,
+    "img_url": "https://mario.wiki.gallery/images/thumb/d/d1/PipeFrameBodyMK8.png/100px-PipeFrameBodyMK8.png",
+    "type": "body",
+    "one": 1,
+    "Weight": 3,
+    "Speed": 3.75,
+    "Handling": 2.5,
+    "Acceleration": 3,
+    "mini_turbo": 5,
+    "off_road": 4,
+    "equivalences": [
+      {
+        "img_url": "https://mario.wiki.gallery/images/thumb/4/47/SneakerBodyMK8.png/100px-SneakerBodyMK8.png",
+        "name": "Sports Coupeé"
+      },
+      {
+        "img_url": "https://mario.wiki.gallery/images/thumb/6/63/MK8DX_Splat_Buggy.png/100px-MK8DX_Splat_Buggy.png",
+        "name": "Inkstriker"
+      }
+    ]
+  },
+  {
+    "name": "Steel Driver",
+    "eq_id": 4,
+    "img_url": "https://mario.wiki.gallery/images/thumb/d/df/Mach8BodyMK8.png/100px-Mach8BodyMK8.png",
+    "type": "body",
+    "one": 1,
+    "Weight": 4,
+    "Speed": 2.75,
+    "Handling": 2,
+    "Acceleration": 1,
+    "mini_turbo": 3,
+    "off_road": 3,
+    "equivalences": [
+      {
+        "img_url": "https://mario.wiki.gallery/images/thumb/6/6c/CircuitSpecialBodyMK8.png/100px-CircuitSpecialBodyMK8.png",
+        "name": "Tri-Speeder"
+      },
+      {
+        "img_url": "https://mario.wiki.gallery/images/thumb/b/be/MK8_Light-Green_City_Tripper.png/100px-MK8_Light-Green_City_Tripper.png",
+        "name": "Bone Rattler"
+      }
+    ]
+  },
+  {
+    "name": "Cat Cruiser",
+    "eq_id": 5,
+    "img_url": "https://mario.wiki.gallery/images/thumb/9/94/Steel_Driver.png/100px-Steel_Driver.png",
+    "type": "body",
+    "one": 1,
+    "Weight": 2,
+    "Speed": 2.75,
+    "Handling": 3.25,
+    "Acceleration": 5,
+    "mini_turbo": 6,
+    "off_road": 3,
+    "equivalences": [
+      {
+        "img_url": "https://mario.wiki.gallery/images/thumb/8/84/StandardBikeBodyMK8.png/100px-StandardBikeBodyMK8.png",
+        "name": "Comet"
+      },
+      {
+        "img_url": "https://mario.wiki.gallery/images/thumb/1/12/JetBikeBodyMK8.png/100px-JetBikeBodyMK8.png",
+        "name": "Yoshi Bike"
+      },
+      {
+        "img_url": "https://mario.wiki.gallery/images/thumb/a/aa/WildWigglerBodyMK8.png/100px-WildWigglerBodyMK8.png",
+        "name": "Teddy Buggy"
+      }
+    ]
+  },
+  {
+    "name": "Circuit Special",
+    "eq_id": 6,
+    "img_url": "https://mario.wiki.gallery/images/thumb/f/f4/CatCruiserBodyMK8.png/100px-CatCruiserBodyMK8.png",
+    "type": "body",
+    "one": 1,
+    "Weight": 3,
+    "Speed": 3,
+    "Handling": 1,
+    "Acceleration": 1,
+    "mini_turbo": 2,
+    "off_road": 1,
+    "equivalences": [
+      {
+        "img_url": "https://mario.wiki.gallery/images/thumb/7/76/MK8_Tanooki_Buggy_Sprite.png/100px-MK8_Tanooki_Buggy_Sprite.png",
+        "name": "B Dasher"
+      },
+      {
+        "img_url": "https://mario.wiki.gallery/images/thumb/c/cf/MK8Streetle.png/100px-MK8Streetle.png",
+        "name": "P-Wing"
+      }
+    ]
+  },
+  {
+    "name": "Badwagon",
+    "eq_id": 7,
+    "img_url": "https://mario.wiki.gallery/images/thumb/5/56/TrispeederBodyMK8.png/100px-TrispeederBodyMK8.png",
+    "type": "body",
+    "one": 1,
+    "Weight": 4,
+    "Speed": 2.75,
+    "Handling": 0.5,
+    "Acceleration": 0,
+    "mini_turbo": 1,
+    "off_road": 5,
+    "equivalences": [
+      {
+        "img_url": "https://mario.wiki.gallery/images/thumb/6/62/YoshiBikeBodyMK8.png/100px-YoshiBikeBodyMK8.png",
+        "name": "Standard ATV"
+      },
+      {
+        "img_url": "https://mario.wiki.gallery/images/thumb/f/fa/TeddyBuggyBodyMK8.png/100px-TeddyBuggyBodyMK8.png",
+        "name": "GLA"
+      }
+    ]
+  },
+  {
+    "name": "Prancer",
+    "eq_id": 8,
+    "img_url": "https://mario.wiki.gallery/images/thumb/c/c2/BadwagonBodyMK8.png/100px-BadwagonBodyMK8.png",
+    "type": "body",
+    "one": 1,
+    "Weight": 1,
+    "Speed": 3.25,
+    "Handling": 2.75,
+    "Acceleration": 2,
+    "mini_turbo": 4,
+    "off_road": 2,
+    "equivalences": [
+      {
+        "img_url": "https://mario.wiki.gallery/images/thumb/0/0e/CometBodyMK8.png/100px-CometBodyMK8.png",
+        "name": "Sport Bike"
+      },
+      {
+        "img_url": "https://mario.wiki.gallery/images/thumb/1/18/MrScootyBodyMK8.png/100px-MrScootyBodyMK8.png",
+        "name": "Jet Bike"
+      }
+    ]
+  },
+  {
+    "name": "Biddybuggy",
+    "eq_id": 9,
+    "img_url": "https://mario.wiki.gallery/images/thumb/f/ff/PrancerBodyMK8.png/100px-PrancerBodyMK8.png",
+    "type": "body",
+    "one": 1,
+    "Weight": 0,
+    "Speed": 1,
+    "Handling": 4.5,
+    "Acceleration": 7,
+    "mini_turbo": 7,
+    "off_road": 4,
+    "equivalences": [
+      {
+        "img_url": "https://mario.wiki.gallery/images/thumb/d/d0/VarmintBodyMK8.png/100px-VarmintBodyMK8.png",
+        "name": "Mr. Scooty"
+      }
+    ]
+  },
+  {
+    "name": "Landship",
+    "eq_id": 10,
+    "img_url": "https://mario.wiki.gallery/images/thumb/4/45/BiddybuggyBodyMK8.png/100px-BiddybuggyBodyMK8.png",
+    "type": "body",
+    "one": 1,
+    "Weight": 0,
+    "Speed": 2,
+    "Handling": 3.5,
+    "Acceleration": 6,
+    "mini_turbo": 6,
+    "off_road": 6,
+    "equivalences": [
+      {
+        "img_url": "https://mario.wiki.gallery/images/thumb/8/8a/MK8MasterCycle.png/100px-MK8MasterCycle.png",
+        "name": "Streetle"
+      }
+    ]
+  },
+  {
+    "name": "Sneeker",
+    "eq_id": 11,
+    "img_url": "https://mario.wiki.gallery/images/thumb/6/6d/LandshipBodyMK8.png/100px-LandshipBodyMK8.png",
+    "type": "body",
+    "one": 1,
+    "Weight": 2,
+    "Speed": 3,
+    "Handling": 2.5,
+    "Acceleration": 2,
+    "mini_turbo": 4,
+    "off_road": 0,
+    "equivalences": [
+      {
+        "img_url": "https://mario.wiki.gallery/images/thumb/f/f8/SportsCoupeMK8.png/100px-SportsCoupeMK8.png",
+        "name": "Gold Standard"
+      },
+      {
+        "img_url": "https://mario.wiki.gallery/images/thumb/1/15/ZeldaMK8Bdasher.png/100px-ZeldaMK8Bdasher.png",
+        "name": "Master Cycle"
+      }
+    ]
+  },
+  {
+    "name": "Standard Bike",
+    "eq_id": 12,
+    "img_url": "https://mario.wiki.gallery/images/thumb/f/fe/Gold_Standard.png/100px-Gold_Standard.png",
+    "type": "body",
+    "one": 1,
+    "Weight": 1,
+    "Speed": 2.75,
+    "Handling": 3.5,
+    "Acceleration": 5,
+    "mini_turbo": 5,
+    "off_road": 5,
+    "equivalences": [
+      {
+        "img_url": "https://mario.wiki.gallery/images/thumb/8/8a/TheDukeBodyMK8.png/100px-TheDukeBodyMK8.png",
+        "name": "Flame Rider"
+      },
+      {
+        "img_url": "https://mario.wiki.gallery/images/thumb/2/23/StandardATVBodyMK8.png/100px-StandardATVBodyMK8.png",
+        "name": "Wild Wiggler"
+      },
+      {
+        "img_url": "https://mario.wiki.gallery/images/thumb/c/c2/GLA-MK8.png/100px-GLA-MK8.png",
+        "name": "W 25 Silver Arrow"
+      }
+    ]
+  },
+  {
+    "name": "Blue Falcon",
+    "eq_id": 13,
+    "img_url": "https://mario.wiki.gallery/images/thumb/f/f4/300SLRoadster_MK8.png/100px-300SLRoadster_MK8.png",
+    "type": "body",
+    "one": 1,
+    "Weight": 0,
+    "Speed": 3.25,
+    "Handling": 2.75,
+    "Acceleration": 3,
+    "mini_turbo": 4,
+    "off_road": 3,
+    "equivalences": [
+      {
+        "img_url": "https://mario.wiki.gallery/images/thumb/7/70/MK8DX_Koopa_Clown.png/100px-MK8DX_Koopa_Clown.png",
+        "name": "Splat Buggy"
+      }
+    ]
+  },
+  {
+    "name": "Tanooki Kart",
+    "eq_id": 14,
+    "img_url": "https://mario.wiki.gallery/images/thumb/f/f6/MK8BlueFalcon.png/100px-MK8BlueFalcon.png",
+    "type": "body",
+    "one": 1,
+    "Weight": 3,
+    "Speed": 3,
+    "Handling": 3.5,
+    "Acceleration": 2,
+    "mini_turbo": 4,
+    "off_road": 7,
+    "equivalences": [
+      {
+        "img_url": "https://mario.wiki.gallery/images/thumb/0/0a/MK8BoneRattler.png/100px-MK8BoneRattler.png",
+        "name": "Koopa Clown"
+      },
+      {
+        "img_url": "https://mario.wiki.gallery/images/thumb/e/eb/MK8DX_Inkstriker.png/100px-MK8DX_Inkstriker.png",
+        "name": "Master Cycle Zero"
+      }
+    ]
+  },
+  {
+    "name": "Super Glider",
+    "eq_id": 1,
+    "img_url": "https://mario.wiki.gallery/images/thumb/d/d5/MK8D_Ancient_Tires.png/100px-MK8D_Ancient_Tires.png",
+    "type": "glider",
+    "one": 1,
+    "Weight": 1,
+    "Speed": 1,
+    "Handling": 0.75,
+    "Acceleration": 1,
+    "mini_turbo": 1,
+    "off_road": 1,
+    "equivalences": [
+      {
+        "img_url": "https://mario.wiki.gallery/images/thumb/a/ae/WarioWingMK8.png/100px-WarioWingMK8.png",
+        "name": "Waddle Wing"
+      },
+      {
+        "img_url": "https://mario.wiki.gallery/images/thumb/1/18/GoldGliderMK8.png/100px-GoldGliderMK8.png",
+        "name": "Hylian Kite"
+      }
+    ]
+  },
+  {
+    "name": "Cloud Glider",
+    "eq_id": 2,
+    "img_url": "https://mario.wiki.gallery/images/thumb/a/a8/SuperGliderMK8.png/100px-SuperGliderMK8.png",
+    "type": "glider",
+    "one": 1,
+    "Weight": 0,
+    "Speed": 0.75,
+    "Handling": 1,
+    "Acceleration": 2,
+    "mini_turbo": 2,
+    "off_road": 1,
+    "equivalences": [
+      {
+        "img_url": "https://mario.wiki.gallery/images/thumb/6/6e/PeachParasolGliderMK8.png/100px-PeachParasolGliderMK8.png",
+        "name": "Parachute"
+      },
+      {
+        "img_url": "https://mario.wiki.gallery/images/thumb/c/c4/ParafoilGliderMK8.png/100px-ParafoilGliderMK8.png",
+        "name": "Flower Glider"
+      },
+      {
+        "img_url": "https://mario.wiki.gallery/images/thumb/9/9c/MK8-HylianKite.png/100px-MK8-HylianKite.png",
+        "name": "Paper Glider"
+      }
+    ]
+  },
+  {
+    "name": "Wario Wing",
+    "eq_id": 3,
+    "img_url": "https://mario.wiki.gallery/images/thumb/8/84/Cloud_Glider.png/100px-Cloud_Glider.png",
+    "type": "glider",
+    "one": 1,
+    "Weight": 2,
+    "Speed": 1,
+    "Handling": 0.75,
+    "Acceleration": 1,
+    "mini_turbo": 1,
+    "off_road": 0,
+    "equivalences": [
+      {
+        "img_url": "https://mario.wiki.gallery/images/thumb/f/f7/BowserKiteMK8.png/100px-BowserKiteMK8.png",
+        "name": "Plane Glider"
+      },
+      {
+        "img_url": "https://mario.wiki.gallery/images/thumb/9/96/MKTVParafoilGliderMK8.png/100px-MKTVParafoilGliderMK8.png",
+        "name": "Gold Glider"
+      },
+      {
+        "img_url": "https://mario.wiki.gallery/images/thumb/0/0e/PaperGliderIcon-MK8.png/100px-PaperGliderIcon-MK8.png",
+        "name": "Paraglider"
+      }
+    ]
+  },
+  {
+    "name": "Peach Parasol",
+    "eq_id": 4,
+    "img_url": "https://mario.wiki.gallery/images/thumb/e/ef/WaddleWingMK8.png/100px-WaddleWingMK8.png",
+    "type": "glider",
+    "one": 1,
+    "Weight": 1,
+    "Speed": 0.5,
+    "Handling": 1,
+    "Acceleration": 2,
+    "mini_turbo": 2,
+    "off_road": 0,
+    "equivalences": [
+      {
+        "img_url": "https://mario.wiki.gallery/images/thumb/d/dd/ParachuteGliderMK8.png/100px-ParachuteGliderMK8.png",
+        "name": "Parafoil"
+      },
+      {
+        "img_url": "https://mario.wiki.gallery/images/thumb/b/b3/FlowerGliderMK8.png/100px-FlowerGliderMK8.png",
+        "name": "Bowser Kite"
+      },
+      {
+        "img_url": "https://mario.wiki.gallery/images/thumb/c/ca/PlaneGliderMK8.png/100px-PlaneGliderMK8.png",
+        "name": "MKTV Parafoil"
+      }
+    ]
+  },
+  {
+    "name": "StandardNormal",
+    "eq_id": 1,
+    "img_url": "https://mario.wiki.gallery/images/thumb/2/26/MK8D_Master_Cycle_Zero.png/100px-MK8D_Master_Cycle_Zero.png",
+    "type": "tire",
+    "one": 1,
+    "Weight": 2,
+    "Speed": 2.5,
+    "Handling": 3,
+    "Acceleration": 4,
+    "mini_turbo": 4,
+    "off_road": 5,
+    "equivalences": [
+      {
+        "img_url": "https://mario.wiki.gallery/images/thumb/9/92/CushionTiresMK8.png/100px-CushionTiresMK8.png",
+        "name": "Blue StandardNormal Blue"
+      },
+      {
+        "img_url": "https://mario.wiki.gallery/images/thumb/5/52/Gold_Tires_MK8.png/100px-Gold_Tires_MK8.png",
+        "name": "GLA TiresGLA Wheels"
+      }
+    ]
+  },
+  {
+    "name": "Monster",
+    "eq_id": 2,
+    "img_url": "https://mario.wiki.gallery/images/thumb/a/a8/StandardTiresMK8.png/100px-StandardTiresMK8.png",
+    "type": "tire",
+    "one": 1,
+    "Weight": 4,
+    "Speed": 1.75,
+    "Handling": 0.5,
+    "Acceleration": 2,
+    "mini_turbo": 3,
+    "off_road": 7,
+    "equivalences": [
+      {
+        "img_url": "https://mario.wiki.gallery/images/thumb/d/db/Blue_Standard.png/100px-Blue_Standard.png",
+        "name": "Hot MonsterFunky Monster"
+      }
+    ]
+  },
+  {
+    "name": "Roller",
+    "eq_id": 3,
+    "img_url": "https://mario.wiki.gallery/images/thumb/2/29/MonsterTiresMK8.png/100px-MonsterTiresMK8.png",
+    "type": "tire",
+    "one": 1,
+    "Weight": 0,
+    "Speed": 1.5,
+    "Handling": 4,
+    "Acceleration": 6,
+    "mini_turbo": 6,
+    "off_road": 4,
+    "equivalences": [
+      {
+        "img_url": "https://mario.wiki.gallery/images/thumb/d/d1/HotMonsterTiresMK8.png/100px-HotMonsterTiresMK8.png",
+        "name": "Azure Roller"
+      }
+    ]
+  },
+  {
+    "name": "Slim",
+    "eq_id": 4,
+    "img_url": "https://mario.wiki.gallery/images/thumb/7/76/RollerTiresMK8.png/100px-RollerTiresMK8.png",
+    "type": "tire",
+    "one": 1,
+    "Weight": 2,
+    "Speed": 2.75,
+    "Handling": 3.75,
+    "Acceleration": 2,
+    "mini_turbo": 3,
+    "off_road": 1,
+    "equivalences": [
+      {
+        "img_url": "https://mario.wiki.gallery/images/thumb/4/4c/SpongeTiresMK8.png/100px-SpongeTiresMK8.png",
+        "name": "WoodWooden"
+      },
+      {
+        "img_url": "https://mario.wiki.gallery/images/thumb/f/fe/AzureRollerTiresMK8.png/100px-AzureRollerTiresMK8.png",
+        "name": "Crimson Slim"
+      }
+    ]
+  },
+  {
+    "name": "Slick",
+    "eq_id": 5,
+    "img_url": "https://mario.wiki.gallery/images/thumb/f/f8/SlimTiresMK8.png/100px-SlimTiresMK8.png",
+    "type": "tire",
+    "one": 1,
+    "Weight": 3,
+    "Speed": 2,
+    "Handling": 1.25,
+    "Acceleration": 1,
+    "mini_turbo": 1,
+    "off_road": 0,
+    "equivalences": [
+      {
+        "img_url": "https://mario.wiki.gallery/images/thumb/7/71/CrimsonSlimTiresMK8.png/100px-CrimsonSlimTiresMK8.png",
+        "name": "Cyber Slick"
+      }
+    ]
+  },
+  {
+    "name": "Metal",
+    "eq_id": 6,
+    "img_url": "https://mario.wiki.gallery/images/thumb/d/dd/SlickTiresMK8.png/100px-SlickTiresMK8.png",
+    "type": "tire",
+    "one": 1,
+    "Weight": 4,
+    "Speed": 2.5,
+    "Handling": 1.25,
+    "Acceleration": 0,
+    "mini_turbo": 1,
+    "off_road": 2,
+    "equivalences": [
+      {
+        "img_url": "https://mario.wiki.gallery/images/thumb/4/48/Retro_Off-Road.png/100px-Retro_Off-Road.png",
+        "name": "Gold TiresGold Wheels"
+      }
+    ]
+  },
+  {
+    "name": "Button",
+    "eq_id": 7,
+    "img_url": "https://mario.wiki.gallery/images/thumb/9/96/MetalTiresMK8.png/100px-MetalTiresMK8.png",
+    "type": "tire",
+    "one": 1,
+    "Weight": 0,
+    "Speed": 1.75,
+    "Handling": 3,
+    "Acceleration": 5,
+    "mini_turbo": 5,
+    "off_road": 3,
+    "equivalences": [
+      {
+        "img_url": "https://mario.wiki.gallery/images/thumb/9/9d/MK8-TriforceTires.png/100px-MK8-TriforceTires.png",
+        "name": "Leaf TiresLeaf Tyres"
+      }
+    ]
+  },
+  {
+    "name": "Off-Road",
+    "eq_id": 8,
+    "img_url": "https://mario.wiki.gallery/images/thumb/0/07/ButtonTiresMK8.png/100px-ButtonTiresMK8.png",
+    "type": "tire",
+    "one": 1,
+    "Weight": 3,
+    "Speed": 2.5,
+    "Handling": 1.5,
+    "Acceleration": 3,
+    "mini_turbo": 2,
+    "off_road": 6,
+    "equivalences": [
+      {
+        "img_url": "https://mario.wiki.gallery/images/thumb/2/29/CyberSlickTiresMK8.png/100px-CyberSlickTiresMK8.png",
+        "name": "Retro Off-Road"
+      },
+      {
+        "img_url": "https://mario.wiki.gallery/images/thumb/b/ba/GLATires-MK8.png/100px-GLATires-MK8.png",
+        "name": "Triforce TiresTriforce Tyres"
+      }
+    ]
+  },
+  {
+    "name": "Sponge",
+    "eq_id": 9,
+    "img_url": "https://mario.wiki.gallery/images/thumb/2/25/Off-Road.png/100px-Off-Road.png",
+    "type": "tire",
+    "one": 1,
+    "Weight": 1,
+    "Speed": 1.75,
+    "Handling": 2,
+    "Acceleration": 4,
+    "mini_turbo": 5,
+    "off_road": 6,
+    "equivalences": [
+      {
+        "img_url": "https://mario.wiki.gallery/images/thumb/0/03/WoodTiresMK8.png/100px-WoodTiresMK8.png",
+        "name": "Cushion"
+      }
+    ]
+  },
+  {
+    "name": "Ancient TiresAncient Tyres",
+    "eq_id": 10,
+    "img_url": "https://mario.wiki.gallery/images/thumb/f/f9/Leaf_Tires_MK8.png/100px-Leaf_Tires_MK8.png",
+    "type": "tire",
+    "one": 1,
+    "Weight": 4,
+    "Speed": 1.75,
+    "Handling": 0.5,
+    "Acceleration": 2,
+    "mini_turbo": 2,
+    "off_road": 7
+  }
+]
