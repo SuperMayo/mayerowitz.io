@@ -3,7 +3,6 @@
     import Header from '$lib/Header.svelte';
     import Footer from '$lib/Footer.svelte';
     import metadata from '../data/metadata';
-    
 </script>
 
 <svelte:head>
@@ -17,7 +16,6 @@
 
 <div class="flex flex-col min-h-screen max-w-5xl mx-auto w-11/12">
     <Header
-        siteTitle="{metadata.siteTitle}"
         menuLinks="{metadata.menuLinks}"
     />
     <slot/>
