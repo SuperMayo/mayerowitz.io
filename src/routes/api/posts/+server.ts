@@ -6,13 +6,12 @@ async function getPosts() {
   let slugs = []
 
   const paths = {
-    ...import.meta.glob('/src/routes/blog/**/+page.md', {eager: true}),
-    ...import.meta.glob('/src/routes/blog/**/+page.svx', {eager: true})
+    ...import.meta.glob('/src/routes/blog/**/+page**', {eager: true})
   };
 
   for (const path in paths) {
       const file = paths[path];
-      const slug = path.split('/')[4].replace('/+page.(md|svx)', '');
+      const slug = path.split('/')[4].split('/+page')[0];
   
       if (file && typeof file === 'object' && 'metadata' in file && slug) {
         const metadata = file.metadata as Post;
