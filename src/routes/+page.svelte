@@ -4,7 +4,7 @@
   const links = metadata.externalLinks
 </script>
 
-<main class = "mx-auto text-justify max-w-xl font-mono md:mt-five mt-one">
+<main class = "mx-auto max-w-xl font-mono md:mt-five mt-one">
     <Blob />
     <div class="px-5">
     <p class="text-left">Hi, I’m <span class="text-lg font-bold text-transparent
