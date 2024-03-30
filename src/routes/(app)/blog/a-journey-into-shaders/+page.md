@@ -2,13 +2,14 @@
 title: "A Journey Into Shaders"
 slug: a-journey-into-shaders
 subtitle: "Part I: The blob"
+description: "Because you and I can't posptone learning shaders forever" 
 date: "2023-10-27"
 readingTime: 20
 category: "computer graphics"
 tags: ["CG", "interactive"] 
 published: true
 SEO_description: | 
-    I finally decided to learn shaders. If you're curious about what shaders are and how they work, this article is for you. We'll start with the basics and build a simple blob from scratch.
+    Demystify shaders with this beginner-friendly guide. Explore fragment shaders, signed distance functions, and metaballs through interactive code examples. Learn how to create beautiful blob animations and effects using just a few lines of code.
 ---
 
 <script>
@@ -77,7 +78,6 @@ SEO_description: |
         uniforms.u_mouse.value.y = e.clientY - rect.top;
     }
 
-    console.log(GpuNvidia)
 </script>
 
 > *This article is interactive: you can play with the code and sliders to interact with the shaders. Enjoy!*
