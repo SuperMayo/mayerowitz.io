@@ -286,7 +286,7 @@ Finally, we get this beauty
     sliderStep={0.001} sliderTitle="Adjust the size of the metaballs"
     sliderMarkers={null}/>
 
-That concludes this introduction. I'm glad I've finally learned to write shaders! This article barely scratches the surface of the basics, but there's no reason to be afraid anymore—neither for you nor for me. Stay tuned for future articles where we'll explore how to elevate this blob into the third dimension. In the meantime, feel free to experiment; you can change the color scheme or tweak the positions of the balls. For updates, you can follow me on [Twitter](https://twitter.com/AntoineMyrwtz).
+That concludes this introduction. I'm glad I've finally learned to write shaders! This article barely scratches the surface of the basics, but there's no reason to be afraid anymore—neither for you nor for me. Stay tuned for future articles where we'll explore how to elevate this blob into the third dimension. In the meantime, feel free to experiment; you can change the color scheme or tweak the positions of the balls. If you liked this article and want to support my work, you can hop on my [Ko-Fi](https://ko-fi.com/antoinemayerowitz) page. For updates, you can follow me on [Twitter](https://twitter.com/AntoineMyrwtz).
 
 
 ## References
