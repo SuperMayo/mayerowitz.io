@@ -72,7 +72,11 @@ void main() {
     metaalt = smax(metaalt, d4, k);
     metaalt = smax(metaalt, d5, k/1.5);
     metaalt = step(0.9, metaalt);
-
+    
+    // Ignore pixels outside
+    if (metaalt < 0.99) {
+        discard;
+    }
     // Centroid of metaballs (for gradient)
     vec2 center = (c1 + c2 + c3 + c4)/4.;
     center.x *= 2.;
@@ -98,9 +102,6 @@ void main() {
     
     d5 = smoothstep(0.5, 0.8, d5);
     color.rgb = mix(color.rgb, vec3(242./255., 241./255., 235./255.), d5);
-    color.rgb = vec3(255./255., 249./255., 240./255.) * (1. - metaalt) + color.rgb * metaalt;
 
-    //gl_FragColor = vec4(vec3(distance(st, vec2(0.5))), 1.0);
-    //gl_FragColor = vec4(vec3(d1), 1.0);
     gl_FragColor = vec4(color.rgb, 1.0);
 }

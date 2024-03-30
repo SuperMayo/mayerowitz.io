@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    *,*::before,*::after {
+      @apply box-border;
+      color-scheme: only light;
+    }
+    html {
+      scrollbar-gutter: stable;
+    }
+    body {
+      @apply bg-beige text-gray-800;
+    }
+    p {
+      @apply font-mono;
+    }
+    p + p {
+      @apply mt-one;
+    }
+    h1 {
+      @apply text-2xl;
+    }
+    h2 {
+      @apply text-xl;
+    }
+    h3 {
+      @apply text-lg;
+    }
+    h4 {
+      @apply text-md;
+    }
+    a {
+      @apply text-teal-700;
+    }
+    a:hover,a:active {
+      @apply text-red-500 transition-all duration-500 drop-shadow-sm;
+    }
+    li {
+      @apply list-none ml-two;
+    }
+    ul {
+      @apply list-none;
+    }
+    h1,h2,h3,h4,h5,h6 {
+      @apply mt-one;
+    }
+  }
+
+@layer utilities {
+  .markdown {
+    p {
+      @apply text-md font-serif text-gray-800;
+    }
+    code {
+      @apply bg-stone-100 text-teal-700 font-mono px-1 text-base;
+    }
+    blockquote {
+      @apply border-l-4 border-teal-700 pl-2 my-two;
+
+      p {
+        @apply text-gray-500;
+      }
+    }
+    a {
+      @apply underline underline-offset-2 text-gray-800 decoration-teal-500 transition-all duration-300;
+    }
+    a:hover,a:active {
+      @apply decoration-red-500 transition-all duration-300;
+    }
+    ul {
+      @apply list-disc list-outside pl-one font-serif mb-one;
+    }
+    li {
+      @apply list-disc ml-0 text-md;
+    }
+    h2 {
+      @apply text-2xl font-bold;
+    }
+  }
+}
