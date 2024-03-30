@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    *,*::before,*::after {
+      @apply box-border;
+      color-scheme: only light;
+    }
+    body {
+      @apply bg-beige;
+      font-family: 'Source Serif 4', Arial;
+    } 
+    p {
+      @apply text-base font-normal font-serif text-neutral-700;
+    }
+    p + p {
+      @apply mt-one;
+    }
+    h1 {
+      @apply text-2xl;
+      font-family: 'Source Serif 4', serif;
+    }
+    h2 {
+      @apply text-xl;
+      font-family: 'Source Serif 4', serif;
+    }
+    h3 {
+      @apply text-lg;
+      font-family: 'Source Serif 4', serif;
+    }
+    section {
+      @apply m-auto grid h-[100svh] w-full;
+    }
+    select {
+      /* @apply bg-blue-800 text-beige italic rounded-full border border-amber-400; */
+      /* @apply bg-transparent underline underline-offset-3 decoration-beige italic;*/
+      @apply rounded-xl border bg-beige bg-opacity-30 text-[0.9em];
+    }
+    button {
+      @apply underline underline-offset-2 hover:brightness-110;
+    }
+    select p {
+      @apply p-0
+    }
+  }
+

@@ -1,10 +1,10 @@
-import type { MarioKartGear } from "../interfaces";
+import type {GearEnhanced} from "./types.ts";
 
 export default function fastParetoFilter(
-  data: Array<MarioKartGear>,
+  data: GearEnhanced[],
   xAxis: string,
   yAxis: string,
-  gearType: string
+  gearType: string | null
 ) {
   // Sort all points according to X in descending order
   var sortedDataset = data.sort(function (a, b) {
@@ -20,10 +20,9 @@ export default function fastParetoFilter(
   for (var i = 0; i < sortedDataset.length; i++) {
     sortedDataset[i].frontier = 0;
 
-    // Select only the points that are of the same type
-    if(sortedDataset[i].type == gearType){
+    // Select only the points that are of the same type if a type is specified
+    if(gearType == null || sortedDataset[i].type == gearType){
       var point = sortedDataset[i];
-      console.log({point, maxY, thisX})
 
       if (!firstMax) {
         firstMax = true;
