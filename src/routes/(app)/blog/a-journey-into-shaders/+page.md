@@ -123,7 +123,7 @@ Now, let's imagine you want to write the simplest shader: a gradient where the r
 
 <FragmentShaderSVG/>
 
-Sure, it might appear too basic, but think of it as a prime playground to get cozy with shader syntax. Go ahead, check out the implementation below and tinker with it -— how about changing the gradient from black to blue?
+Sure, it might appear too basic, but think of it as a prime playground to get cozy with shader syntax. Go ahead, check out the implementation below and tinker with it — how about changing the gradient from black to blue?
 
 <Shader fragmentShader={FirstFrag} vertexShader={vertexShader} editor={true} legend="A shader. Impressive?"/>
 
@@ -136,8 +136,8 @@ There are a few interesting things to note here about the syntax:
 - **Inputs**: We can declare input to the shaders that can be *varying* or *uniform*. Varying variables are different for each pixel, while uniform variables are the same for all pixels. Here, we declare a varying variable `vUv`, which is a 2D vector representing the position of the pixel on a plane. It is declared as `varying` because the value is different for each pixel on the screen.
 - **Coordinates Origin**: Take note, the origin of UV space is at the lower-left corner. If you're used to SVG or HTML canvas, this might feel like driving on the other side of the road.
 - **Built-in types**: Just like C, shaders demand type declaration. You'll come across a range of types suited for vectors and matrices—think `vec2`, `vec3`, `vec4`, `mat2`, `mat3`, and the list goes on.
-- **Swizzling**: Accessing elements of a vector? Easy, just use the dot notation (vec2(1, 2).x gives you 1). Want to slice and dice your vector? Use the xy notation (vec4(1, 2, 3, 4).xy returns vec2(1, 2)). If you're working with colors, feel free to use the `myvector.rgba` syntax -- This is entirely up to you.
-- **Output**: There's no return statement. The color for each pixel is determined by the value of `gl_FragColo` at the end of the `main()` function.
+- **Swizzling**: Accessing elements of a vector? Easy, just use the dot notation (`vec2(1, 2).x` gives you `1`). Want to slice and dice your vector? Use the xy notation (`vec4(1, 2, 3, 4).xy` returns `vec2(1, 2)`). If you're working with colors, feel free to use the `myvector.rgba` syntax -- This is entirely up to you.
+- **Output**: There's no return statement. The color for each pixel is determined by the value of `gl_FragColor` at the end of the `main()` function.
 
 So even with our super simple example, you can already feel the power of shaders. Without it, an equivalent result would have required a loop over all the pixels of the canvas — 90000 in this case — just to create this gradient. But this is just the beginning; shaders could do so much more than that.
 
