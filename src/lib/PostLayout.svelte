@@ -1,6 +1,6 @@
 <script>
     import Giscus from "@giscus/svelte"
-    import metadata from "../data/metadata";
+    import metadata from "$lib/data/metadata";
 
     export let title;
     export let date;
