@@ -208,28 +208,36 @@
         <div slot="foreground" class="relative m-auto">
             <section>
                 <StepContent>
-                    In Mario Kart 8, you have to choose a driver, a body, tires and a glider. This
-                    decision matters as much as your skills.
+                    In Mario Kart 8, choosing your driver, vehicle, tires, and glider isn't just
+                    about style &mdash; it's as crucial as your racing skills. Speed, acceleration
+                    and 4 other statistics are determined by this decision. Ever wondered how to
+                    truly find the best ones?
+                </StepContent>
+            </section>
+            <section>
+                <StepContent>
+                    There are dozens of choice for every component, each with their own statistics
+                    affecting your performance.
                 </StepContent>
             </section>
             <section>
                 <StepContent
-                    >For each parts, you get dozens of choice with their own different statistics.</StepContent
+                    >This adds up to an unbelievable number of options to choose from.</StepContent
                 >
-            </section>
-            <section>
-                <StepContent>Which adds up to an unbelievable number of options.</StepContent>
             </section>
             <section>
                 <StepContent>
                     Hopefully, many choices are just stylistic, but even after you remove the
-                    duplicates, it remains a tough job to find a good build.
+                    duplicates, it remains a tough job to navigate thousands of options.
                 </StepContent>
             </section>
             <section>
                 <StepContent>
-                    Is there any chance to find the <span class="italic">best</span> build or is it just
-                    luck? Can we imagine a systematic way to select good options?
+                    Is there any chance to find the <span class="italic">best</span> build or is it
+                    just luck? Should you favor <i>Speed</i> to be the fastest, or
+                    <i>acceleration</i>
+                    to quickly recover after taking a hit? Let's dive into a solution proposed over a
+                    century ago by economist Vilfredo Pareto.
                 </StepContent>
             </section>
         </div>
