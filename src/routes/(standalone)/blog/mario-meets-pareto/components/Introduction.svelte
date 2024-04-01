@@ -237,7 +237,7 @@
                     Is there any chance to find the <span class="italic">best</span> build or is it
                     just luck? Should you favor <i>speed</i> to be the fastest, or
                     <i>acceleration</i>
-                    to quickly recover after taking a hit? Let's dive into a solution proposed over a
+                    to quickly recover after taking a hit? Let me show you a solution proposed over a
                     century ago by economist Vilfredo Pareto.
                 </StepContent>
             </section>
