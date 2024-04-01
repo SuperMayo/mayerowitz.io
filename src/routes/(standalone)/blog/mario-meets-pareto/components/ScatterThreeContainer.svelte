@@ -94,11 +94,24 @@ witness this.
         },
         4: () => {
             uniforms.focusFrontier.value = 1;
-            if ($clickedId == 4265) $clickedId = null;
+            $clickedId = null;
             handleClickedPoint(null);
             $hoveredId = null;
+            printBest = false;
         },
         5: () => {
+            printBest = true;
+            if (bestChoice == null) {
+                bestChoice = getBest(thisFrontier, p);
+            }
+            console.log({ p, bestChoice });
+            let bestId = bestChoice.eq_id;
+            $clickedId = bestId;
+            $hoveredId = bestId;
+            handleClickedPoint(bestId);
+            handleUpdateStats(bestId);
+        },
+        6: () => {
             scatterComponent.moveCameraTo({ x: 45, y: 25, z: -10 }, 1000);
             $clickedId = 4265;
             $hoveredId = 4265;
@@ -109,28 +122,17 @@ witness this.
             handleAxisChange({ target: { dataset: { axis: "y" }, value: "acceleration" } });
             handleAxisChange({ target: { dataset: { axis: "z" }, value: "mini_turbo" } });
         },
-        6: () => {
-            // Do not reset axis if you come back from (7)
-            if (indexHistory[1] == 5) {
-                $clickedId = null;
-                $hoveredId = null;
-                handleClickedPoint(null);
-                handleAxisChange({ target: { dataset: { axis: "x" }, value: "handling" } });
-                handleAxisChange({ target: { dataset: { axis: "z" }, value: "off_road" } });
-            }
-            uniforms.focusFrontier.value = 1;
-        },
-        7: () => {
-            printBest = true;
-            if (bestChoice == null) {
-                bestChoice = getBest(thisFrontier, p);
-            }
-            let bestId = bestChoice.eq_id;
-            $clickedId = bestId;
-            $hoveredId = bestId;
-            handleClickedPoint(bestId);
-            handleUpdateStats(bestId);
-        },
+        //7: () => {
+        //    // Do not reset axis if you come back from (7)
+        //    if (indexHistory[1] == 5)
+        //        $clickedId = null;
+        //        $hoveredId = null;
+        //        handleClickedPoint(null);
+        //        handleAxisChange({ target: { dataset: { axis: "x" }, value: "handling" } });
+        //        handleAxisChange({ target: { dataset: { axis: "z" }, value: "off_road" } });
+        //    }
+        //    uniforms.focusFrontier.value = 1;
+        //},
     };
 
     const dataLoaded = derived(
@@ -142,7 +144,7 @@ witness this.
     );
 
     // Reactive Statements
-    $: if (p && indexHistory.includes(7) && isViewable) {
+    $: if (p && index == 5 && isViewable) {
         utilityp = [p[0], p[1] - p[0], 1 - p[1]];
         bestChoice = getBest(thisFrontier, utilityp);
         let bestId = bestChoice.eq_id;
@@ -154,7 +156,7 @@ witness this.
     $: indexHistory = [index, indexHistory[0]];
     $: if ($hoveredId) handleUpdateStats($hoveredId);
     $: if (scatterComponent) handleClickedPoint($clickedId);
-    $: zoomFactor = $innerWidth > $innerHeight ? $innerHeight / 1200 : $innerWidth / 1200;
+    $: zoomFactor = $innerWidth > $innerHeight ? 1 : 0.5;
     $: if (scatterComponent && isViewable) fireEvent(index);
     $: if (offset >= 0.1 && index == 2 && isViewable) {
         const t = cubicInOut((offset - 0.1) / 0.9);
@@ -214,7 +216,6 @@ witness this.
             clickedPoint = $combs[id];
             updateState(1, id, 1, true);
         } else {
-            scatterComponent.lookAt.set({ x: 10, y: 10, z: 10 });
             updateState(1, null, 1, true);
         }
         scatterComponent.updateBuffer("state", state);
@@ -292,12 +293,12 @@ witness this.
     }
 </script>
 
-<div class="pointer-events-none min-h-full w-full overflow-hidden">
-    <Scroller top={0} bottom={0.9} threshold={0.5} bind:index bind:offset>
+<div class="pointer-events-none min-h-full w-full overflow-x-clip">
+    <Scroller top={0} bottom={0.5} threshold={0} bind:index bind:offset>
         <div
             slot="background"
-            class="pointer-events-none sticky h-[100vh] min-h-32
-            w-full md:[pointer-events:all]"
+            class="bg-purple-900ign-middle pointer-events-none sticky flex
+            h-[100vh] min-h-32 w-full items-center md:[pointer-events:all]"
         >
             {#if isViewable}
                 <Lazy>
@@ -373,16 +374,18 @@ witness this.
             <section>
                 <StepContent>
                     <p>
-                        585 unique build with varying speed and acceleration are available! Tough
-                        decision for a player to make. The Pareto front &mdash; in yellow &mdash;
-                        narrows it down to 14 optimal options.
+                        585 builds with unique speed and acceleration properties are available
+                        &mdash; tough decision for a player to make. But we can apply the same
+                        method as before. See, the Pareto front &mdash; in yellow &mdash; narrows it
+                        down to 14 efficient options!
                     </p>
                 </StepContent>
             </section>
             <section>
                 <StepContent>
                     <p>
-                        However, skilled players want a build that features more than just
+                        Now, if you're a skilled player, you need a build that optimizes more than
+                        just
                         <select on:change={handleAxisChange} data-axis="x" bind:value={axis.x}>
                             {#each $axisChoices as choice}
                                 <option value={choice.value}>{choice.name.toLowerCase()}</option>
@@ -393,8 +396,8 @@ witness this.
                             {#each $axisChoices as choice}
                                 <option value={choice.value}>{choice.name.toLowerCase()}</option>
                             {/each}
-                        </select>. For instance, techniques like drifting are used extensively to
-                        gain a mini turbo.
+                        </select>. There is a third crucial statistic: the
+                        <i>mini turbo</i> that provides a speed boost after drifting.
                     </p>
                 </StepContent>
             </section>
@@ -403,57 +406,26 @@ witness this.
             </section>
             <section>
                 <StepContent>
-                    <p>Hopefully, the Pareto front can be extended to any number of objectives.</p>
+                    <p>
+                        Good news: the Pareto frontier concept can be generalized to more than two
+                        dimensions. See, I added the <i>mini turbo</i> as a third one!
+                    </p>
                 </StepContent>
             </section>
             <section>
                 <StepContent>
                     <p>
                         Sadly, it comes at a cost. As a rule of thumb, the size of the Pareto front
-                        expands exponentially with the objectives.
+                        expands exponentially with the number of (potentialy infinite) dimensions,
+                        making your choice harder.
                     </p>
                 </StepContent>
             </section>
             <section>
                 <StepContent>
                     <p>
-                        I focused here on the current build favored by top players, and as expected
-                        it sits right on the frontier.
-                    </p>
-                </StepContent>
-            </section>
-            <section>
-                <StepContent>
-                    <p>
-                        For inexperienced players, optimizing others factors like <select
-                            on:change={handleAxisChange}
-                            data-axis="x"
-                            bind:value={axis.x}
-                        >
-                            {#each $axisChoices as choice}
-                                <option value={choice.value}>{choice.name.toLowerCase()}</option>
-                            {/each}
-                        </select>
-                        <select on:change={handleAxisChange} data-axis="y" bind:value={axis.y}>
-                            {#each $axisChoices as choice}
-                                <option value={choice.value}>{choice.name.toLowerCase()}</option>
-                            {/each}
-                        </select>
-                        and
-                        <select on:change={handleAxisChange} data-axis="z" bind:value={axis.z}>
-                            {#each $axisChoices as choice}
-                                <option value={choice.value}>{choice.name.toLowerCase()}</option>
-                            {/each}
-                        </select>
-                        may turn more useful.
-                    </p>
-                </StepContent>
-            </section>
-            <section>
-                <StepContent>
-                    <p>
-                        In such case, here's the best pick when you put equal importance on each
-                        dimensions. Or open the dialogue below and find the best build for you!
+                        As in the 2D case, you have to put weights on each dimensions to reveal the
+                        optimal build. Open the dialogue below and find the best build for you!
                         <details>
                             <summary class="cursor-pointer underline hover:brightness-110"
                                 >Customize</summary
@@ -504,6 +476,48 @@ witness this.
                     </p>
                 </StepContent>
             </section>
+            <section>
+                <StepContent>
+                    <p>
+                        Let's look at the build currently favored by top players. Unsurprisingly,
+                        the build sits right on our frontier when optimizing speed, acceleration,
+                        and mini turbo.
+                    </p>
+                </StepContent>
+            </section>
+            <!-- <section>
+                <StepContent>
+                    <p>
+                        If you are a new player however, optimizing on <select
+                            on:change={handleAxisChange}
+                            data-axis="x"
+                            bind:value={axis.x}
+                        >
+                            {#each $axisChoices as choice}
+                                <option value={choice.value}>{choice.name.toLowerCase()}</option>
+                            {/each}
+                        </select>
+                        <select on:change={handleAxisChange} data-axis="y" bind:value={axis.y}>
+                            {#each $axisChoices as choice}
+                                <option value={choice.value}>{choice.name.toLowerCase()}</option>
+                            {/each}
+                        </select>
+                        and
+                        <select on:change={handleAxisChange} data-axis="z" bind:value={axis.z}>
+                            {#each $axisChoices as choice}
+                                <option value={choice.value}>{choice.name.toLowerCase()}</option>
+                            {/each}
+                        </select>
+                        may turn more useful.
+                    </p>
+                </StepContent>
+            </section> -->
         </div>
     </Scroller>
 </div>
+
+<style lang="postcss">
+    section {
+        @apply m-auto flex h-[100svh] w-full flex-col justify-end;
+    }
+</style>

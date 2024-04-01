@@ -208,33 +208,34 @@
         <div slot="foreground" class="relative m-auto">
             <section>
                 <StepContent>
-                    In Mario Kart 8, choosing your driver, vehicle, tires, and glider isn't just
-                    about style &mdash; it's as crucial as your racing skills. Speed, acceleration
-                    and 4 other statistics are determined by this decision. Ever wondered how to
-                    truly find the best ones?
+                    In Mario Kart 8, choosing your driver, kart's body, tires, and glider isn't just
+                    about style &mdash; it's as crucial as your racing skills to win a race. Ever
+                    wondered how to truly find the best ones?
                 </StepContent>
             </section>
             <section>
                 <StepContent>
-                    There are dozens of choice for every component, each with their own statistics
-                    affecting your performance.
+                    For each of those four elements, you have tens of options. For each option,
+                    there are distinct statistics (speed, acceleration, ...) affecting your
+                    performance.
                 </StepContent>
             </section>
             <section>
                 <StepContent
-                    >This adds up to an unbelievable number of options to choose from.</StepContent
+                    >This adds up to an unbelievable amount of builds to choose from.</StepContent
                 >
             </section>
             <section>
                 <StepContent>
-                    Hopefully, many choices are just stylistic, but even after you remove the
-                    duplicates, it remains a tough job to navigate thousands of options.
+                    Hopefully, many choices are just stylistic &mdash; they have identical
+                    statistics &mdash; but even after ignoring those duplicates, it remains a tough
+                    job to navigate the thousands of options.
                 </StepContent>
             </section>
             <section>
                 <StepContent>
                     Is there any chance to find the <span class="italic">best</span> build or is it
-                    just luck? Should you favor <i>Speed</i> to be the fastest, or
+                    just luck? Should you favor <i>speed</i> to be the fastest, or
                     <i>acceleration</i>
                     to quickly recover after taking a hit? Let's dive into a solution proposed over a
                     century ago by economist Vilfredo Pareto.
@@ -246,7 +247,7 @@
 
 <style lang="postcss">
     section {
-        @apply pointer-events-none m-auto grid h-[100vh];
+        @apply m-auto flex h-[100svh] w-full flex-col justify-center;
     }
     svg {
         transform: rotate(calc(var(--svg-rotate) * 1deg));
