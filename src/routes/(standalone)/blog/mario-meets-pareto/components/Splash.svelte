@@ -82,7 +82,7 @@
                     data-sveltekit-reload>Mayerowitz.io</a
                 >
             </div>
-            <section class="m-auto max-w-screen-md p-one">
+            <section class="m-auto max-w-screen-md overflow-hidden p-one">
                 <h1
                     class="z-50 mb-0 text-3xl font-black text-slate-200 sm:text-4xl md:text-[5rem] md:[line-height:6rem]"
                 >
@@ -104,7 +104,9 @@
                 >
                     {subtitle}
                 </h2>
-                <p class="absolute bottom-three text-center font-sans text-sm text-red-400">
+                <p
+                    class="invisible absolute bottom-three text-right font-sans text-sm text-red-400 md:visible"
+                >
                     Written by <a
                         class="text-slate-200 hover:text-amber-400"
                         href="/"

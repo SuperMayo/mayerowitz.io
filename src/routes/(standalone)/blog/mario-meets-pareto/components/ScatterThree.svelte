@@ -41,7 +41,7 @@
     export const camera = {
         positions: { x: 10, y: 10, z: 10 },
         rotation: { x: 0, y: 0, z: 0 },
-        lookAt: { x: 10, y: 10, z: 10 },
+        lookAt: { x: 8, y: 8, z: 10 },
         zoom: 1,
         near: 1,
         far: 1600,
@@ -54,7 +54,7 @@
         { duration: 500, easing: eases.cubicInOut },
     );
     export const lookAt = tweened(
-        { x: 10, y: 10, z: 10 },
+        { x: camera.lookAt.x, y: camera.lookAt.y, z: camera.lookAt.z },
         { duration: 500, easing: eases.cubicInOut },
     );
     export const cameraZoom = tweened(1 * zoomFactor, { duration: 1, easing: eases.cubicInOut });
@@ -369,14 +369,19 @@
 {/if}
 
 <!-- Axis label -->
-<HTML position.x={10} position.z={-labelDistance} position.y={-labelDistance} center={true}>
+<HTML
+    position.x={isCameraFar ? 10 : 5}
+    position.z={-labelDistance / 2}
+    position.y={-labelDistance}
+    center={true}
+>
     <p class="label md:text-md">{axisLabel(axis.x)}</p>
 </HTML>
-<HTML position.x={-labelDistance / 1.2} position.z={0} position.y={10} center={isCameraFar}>
+<HTML position.x={-labelDistance / 1.2} position.z={1} position.y={10} center={isCameraFar}>
     <p class="label overflow -rotate-90 md:text-md">{axisLabel(axis.y)}</p>
 </HTML>
 {#if !isCameraFar}
-    <HTML position.x={20 + labelDistance} position.z={10} position.y={-1} center={true}>
+    <HTML position.x={20 + labelDistance / 2} position.z={16} position.y={-1} center={true}>
         <p class="label md:text-md">{axisLabel(axis.z)}</p>
     </HTML>
 {/if}

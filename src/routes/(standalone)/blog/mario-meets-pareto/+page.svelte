@@ -26,7 +26,7 @@
     import StepContent from "./components/StepContent.svelte";
     import "./app.css";
     import { PUBLIC_BUCKET_MK8_URL } from "$env/static/public";
-    import { onDestroy, onMount } from "svelte";
+    import { onMount } from "svelte";
     import KofiButton from "$lib/KofiButton.svelte";
     import Footer from "$lib/Footer.svelte";
 
@@ -49,7 +49,7 @@
     }
 
     function updateBackgroundColor() {
-        const threshold = 500;
+        const threshold = 200;
         const sections = document.querySelectorAll("[data-color]");
         sections.forEach((section) => {
             const sectionTop = section.offsetTop - threshold;
@@ -114,7 +114,7 @@
         <GearsScroll />
     </div>
 
-    <div class="flex min-h-[100vh] align-middle" data-color="bg-beige">
+    <div class="flex min-h-[100vh] flex-col justify-center" data-color="bg-beige">
         <StepContent>
             In practice, you not only choose a driver, but a full set of body, wheels, and glider.
             In the next section, I'll display every build as a distinct point. It will however make
@@ -128,7 +128,7 @@
         </div>
     {/if}
     <div
-        class="m-auto flex min-h-[100vh] max-w-screen-sm flex-col justify-center p-one align-middle [&_a:hover]:text-[#b40400] [&_a]:text-blue-800"
+        class="m-auto flex max-w-screen-sm flex-col justify-center p-one pb-three pt-[80vh] align-middle [&_a:hover]:text-[#b40400] [&_a]:text-blue-800"
         data-color="bg-beige"
     >
         <p>
@@ -136,35 +136,44 @@
             similar trade-offs. You want a <a
                 href="https://en.wikipedia.org/wiki/Noodle_soup"
                 target="_blank">meal that's both cheap and delicious</a
-            >? A material that's both flexible and strong? A job that's both well-paid and
-            fulfilling?
+            >? A job that's both well-paid, easy, and fulfilling?
             <a href="https://en.wikipedia.org/wiki/Modern_portfolio_theory" target="_blank">
-                a portfolio with low risks and high returns</a
-            >? In all these cases, you're facing a multi-objective optimization problem, and you
-            have to make trade-offs. The Pareto criteria don't tell you what to choose, but they can
-            help you make an informed decision by eliminating sub-optimal options.
+                A portfolio with low risks and high returns</a
+            >? A flexible and strong material that's also easy to produce?
+            <a href="https://academic.oup.com/restud/article-abstract/38/2/175/1527903">
+                A fair taxation that remains efficient</a
+            > ? In all these cases, you're facing a multi-objective optimization problem, and you have
+            to make trade-offs.
         </p>
         <p>
-            Of course, if you know the exact priorities you want to assign to each objective (your
-            utility function), you don't need to draw the Pareto front at all. But you're often
-            faced with situations where your preferences are unclear or uncertain. The Pareto Front
-            provides an objective methodology for navigating such multi-objective trade-offs.
+            Of course, if you already know the exact weights you want to assign to each dimension
+            (i.e., you know your utility function), you reduce the problem to a single objective
+            optimization. This is because you can combine the dimensions with the weights into a
+            single quantity to optimize (often called utility, cost, or fitness). In that case, you
+            don't need Pareto at all.
+        </p>
+        <p>
+            But you're often faced with situations where your utility function is unknown or
+            uncertain. In those situations, the Pareto front helps you eliminate objectively all the
+            sub-optimal options, but it won't reveal the one best option right from the outset. But
+            you may now experiment with these efficient options and select the one that fits you the
+            best.
         </p>
     </div>
 
     <div
-        class="m-auto max-w-screen-sm rounded-xl bg-blue-800 p-one text-stone-300 drop-shadow-md [&_a]:text-stone-100 [&_a]:underline [&_p]:text-stone-300"
+        class="m-auto w-11/12 max-w-screen-sm rounded-xl bg-blue-800 p-one text-stone-300 drop-shadow-md [&_a]:text-stone-100 [&_a]:underline [&_p]:text-stone-300"
         data-color="bg-beige"
     >
-        <h3>Acknowledgement</h3>
+        <h3>Acknowledgments</h3>
         <p>
-            I've made some simplifying assumptions in this article to keep it readable for a large
+            I've made som simplifying assumptions in this article to keep it readable for a large
             audience. In truth, the statistics that I presented are translated into derived in-game
             stats that are not always linear with the base statistics. Additionally, their is 4
-            speed stats and 4 handling stats for all gears (except driver), but I decided to simply
-            average those. I've also completely hidden the functional form of the utility function.
-            If you want to read more details behind this article or if you just like my work and
-            want to see more in the future, please consider
+            speed stats and 4 handling stats for all gears (except for the driver), but I decided to
+            simply average those. I've also completely hidden the functional form of the utility
+            function, which can play a great role. To get access to more details behind this article
+            or if you just like my work and want to see more in the future, please consider
             <a href="https://ko-fi.com/antoinemayerowitz">donating some coins</a>.
         </p>
         <h3>Credits</h3>

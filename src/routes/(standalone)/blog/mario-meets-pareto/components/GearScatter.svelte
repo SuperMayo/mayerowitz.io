@@ -348,7 +348,7 @@
             </filter>
         </defs>
     </svg>
-    {#if hoveredData}
+    {#if hoveredData && showY}
         <Tooltip data={hoveredData} x={mouse.x} y={mouse.y} />
     {/if}
 </div>

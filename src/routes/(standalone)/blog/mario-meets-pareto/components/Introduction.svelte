@@ -208,28 +208,37 @@
         <div slot="foreground" class="relative m-auto">
             <section>
                 <StepContent>
-                    In Mario Kart 8, you have to choose a driver, a body, tires and a glider. This
-                    decision matters as much as your skills.
+                    In Mario Kart 8, choosing your driver, kart's body, tires, and glider isn't just
+                    about style &mdash; it's as crucial as your racing skills to win a race. Ever
+                    wondered how to truly find the best ones?
+                </StepContent>
+            </section>
+            <section>
+                <StepContent>
+                    For each of those four elements, you have tens of options. For each option,
+                    there are distinct statistics (speed, acceleration, ...) affecting your
+                    performance.
                 </StepContent>
             </section>
             <section>
                 <StepContent
-                    >For each parts, you get dozens of choice with their own different statistics.</StepContent
+                    >This adds up to an unbelievable amount of builds to choose from.</StepContent
                 >
             </section>
             <section>
-                <StepContent>Which adds up to an unbelievable number of options.</StepContent>
-            </section>
-            <section>
                 <StepContent>
-                    Hopefully, many choices are just stylistic, but even after you remove the
-                    duplicates, it remains a tough job to find a good build.
+                    Hopefully, many choices are just stylistic &mdash; they have identical
+                    statistics &mdash; but even after ignoring those duplicates, it remains a tough
+                    job to navigate the thousands of options.
                 </StepContent>
             </section>
             <section>
                 <StepContent>
-                    Is there any chance to find the <span class="italic">best</span> build or is it just
-                    luck? Can we imagine a systematic way to select good options?
+                    Is there any chance to find the <span class="italic">best</span> build or is it
+                    just luck? Should you favor <i>speed</i> to be the fastest, or
+                    <i>acceleration</i>
+                    to quickly recover after taking a hit? Let me show you a solution proposed over a
+                    century ago by economist Vilfredo Pareto.
                 </StepContent>
             </section>
         </div>
@@ -238,7 +247,7 @@
 
 <style lang="postcss">
     section {
-        @apply pointer-events-none m-auto grid h-[100vh];
+        @apply m-auto flex h-[100svh] w-full flex-col justify-center;
     }
     svg {
         transform: rotate(calc(var(--svg-rotate) * 1deg));
