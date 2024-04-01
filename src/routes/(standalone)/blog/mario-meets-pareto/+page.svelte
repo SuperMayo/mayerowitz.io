@@ -26,7 +26,7 @@
     import StepContent from "./components/StepContent.svelte";
     import "./app.css";
     import { PUBLIC_BUCKET_MK8_URL } from "$env/static/public";
-    import { onDestroy, onMount } from "svelte";
+    import { onMount } from "svelte";
     import KofiButton from "$lib/KofiButton.svelte";
     import Footer from "$lib/Footer.svelte";
 
