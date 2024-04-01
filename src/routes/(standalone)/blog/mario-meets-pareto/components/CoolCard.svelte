@@ -34,7 +34,7 @@
 
 <div
     id="cool-card"
-    class="absolute -z-10 ml-[5%] w-44 sm:w-80"
+    class="absolute top-[33%] -z-10 ml-[5%] w-44 sm:w-80"
     style="--rotateX:{-offsetY + 'deg'}; --rotateY:{offsetX +
         'deg'}; --offsetX:{offsetX}; --offsetY:{offsetY}"
 >
@@ -46,7 +46,9 @@
     #cool-card {
         transform-style: preserve-3d;
         transform: perspective(1000px) rotateX(var(--rotateX)) rotateY(var(--rotateY));
-        filter: drop-shadow(calc(var(--offsetX) * -1px) calc(var(--offsetY) * -1px) 10px #b40400);
+        filter: drop-shadow(
+            calc(var(--offsetX) * -1px) calc(var(--offsetY) * -1px) 10px rgba(0, 0, 0, 0.2)
+        );
     }
 
     .light {
