@@ -155,8 +155,8 @@
         <p>
             But you're often faced with situations where your utility function is unknown or
             uncertain. In those situations, the Pareto front helps you eliminate objectively all the
-            sub-optimal options, but it won't reveal the one best option right from the outset. But
-            you may now experiment with these efficient options and select the one that fits you the
+            sub-optimal options. It won't reveal the one best option right from the outset, but you
+            may now experiment with these efficient options and select the one that fits you the
             best.
         </p>
     </div>
@@ -167,9 +167,9 @@
     >
         <h3>Acknowledgments</h3>
         <p>
-            I've made som simplifying assumptions in this article to keep it readable for a large
+            I've made some simplifying assumptions in this article to keep it readable for a large
             audience. In truth, the statistics that I presented are translated into derived in-game
-            stats that are not always linear with the base statistics. Additionally, their is 4
+            stats that are not always linear with the base statistics. Additionally, there are 4
             speed stats and 4 handling stats for all gears (except for the driver), but I decided to
             simply average those. I've also completely hidden the functional form of the utility
             function, which can play a great role. To get access to more details behind this article
