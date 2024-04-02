@@ -11,7 +11,7 @@
     // Scroll dependent variables
     let showY = false;
     let xAxis: AxisName = "speed";
-    let yAxis: AxisName = "acceleration";
+    let yAxis: AxisName = "one";
     let gearType: GearName = "driver";
     let showStar = false;
     let focus: string[] = [];
@@ -21,8 +21,6 @@
     // Display variables
     let containerWidth: number;
     let scatterWidth: number = 200;
-    let maxX = 10;
-    let maxY = 10;
 
     // Misc
     let canDraw = false;
@@ -30,6 +28,7 @@
     let alpha: number = 0.5; // Alpha parameter for the utility
     let optimalGear: GearEnhanced[] = [];
     let index: number = 0;
+    let fromIndexZero: boolean = false;
 
     const target2event: {
         [key: number]: () => void;
@@ -38,15 +37,21 @@
             // New State
             showY = false;
             showStar = true;
+            yAxis = "one";
+            fromIndexZero = true;
         },
         1: () => {
             // Changed State
             showY = true;
             showStar = false;
+            yAxis = "acceleration";
 
             // New State
-            yAxis = "acceleration";
             focus = [];
+
+            // Worst bug-fix ever, don't tell my mom
+            // This is to avoid glitches on scroll from index 0 to 1
+            if (fromIndexZero) window.scrollBy(0, 10);
         },
         2: () => {
             // Old State
@@ -55,6 +60,7 @@
             yAxis = "acceleration";
 
             // Changed State
+            fromIndexZero = false;
             focus = ["Koopa Troopa"];
 
             // New State
@@ -310,8 +316,8 @@
                     bind:hoveredData
                     bind:onlyFrontier
                     bind:focus
-                    bind:maxX
-                    bind:maxY
+                    maxX={10}
+                    maxY={10}
                     bind:alpha
                     bind:optimalGear
                     bind:size={scatterWidth}

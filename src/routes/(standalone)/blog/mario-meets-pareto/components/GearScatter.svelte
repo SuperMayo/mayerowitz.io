@@ -48,7 +48,6 @@
     let mouse = { x: 0, y: 0 };
 
     $: leftMarginReactive = showY ? $marginScroll.left : $marginScroll.right;
-    $: yAxis = showY ? yAxis : "one";
     $: width = height = size;
     $: imgSize = size / 13;
     $: setAxis(xAxis, yAxis, gearType);
@@ -76,7 +75,6 @@
         utilityCurveY = utilityCurveX.map((d) => isoUtility(ubar, d, alpha));
         utilitySvgLine = pointsToPolyline(utilityCurveX, utilityCurveY);
     }
-
     function pointsToPolyline(X: number[], Y: number[], ylim: number = 10.5) {
         let polyLine = "";
         // First, find the xval where y = 10
@@ -348,7 +346,7 @@
             </filter>
         </defs>
     </svg>
-    {#if hoveredData && showY}
+    {#if hoveredData && !isAnimating}
         <Tooltip data={hoveredData} x={mouse.x} y={mouse.y} />
     {/if}
 </div>
