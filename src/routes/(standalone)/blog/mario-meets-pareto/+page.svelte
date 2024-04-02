@@ -92,6 +92,11 @@
         href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;700&family=Source+Serif+4:wght@400;700&display=swap"
         rel="stylesheet"
     />
+    <script
+        data-goatcounter="https://supermayo.goatcounter.com/count"
+        async
+        src="//gc.zgo.at/count.js"
+    ></script>
 </svelte:head>
 
 <svelte:window
