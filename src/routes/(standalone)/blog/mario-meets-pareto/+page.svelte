@@ -18,6 +18,7 @@
 </script>
 
 <script lang="ts">
+    import { fade } from "svelte/transition";
     import Splash from "./components/Splash.svelte";
     import Introduction from "./components/Introduction.svelte";
     import GearsScroll from "./components/GearsScroll.svelte";
@@ -34,7 +35,10 @@
     let innerHeight: number;
     let dataLoaded: boolean = false;
     let scrollPosition = 0;
+    let ticking = false;
     let currentBgColorClass = "bg-beige";
+    let splashContainer: Element;
+    let visibleScrollToTop = false;
 
     $: {
         width.set(innerWidth);
@@ -48,17 +52,43 @@
         await frontiers.fetch();
     }
 
-    function updateBackgroundColor() {
+    function updateBackgroundColor(scrollY) {
         const threshold = 200;
         const sections = document.querySelectorAll("[data-color]");
         sections.forEach((section) => {
             const sectionTop = section.offsetTop - threshold;
             const sectionHeight = section.offsetHeight;
 
-            if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+            if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
                 currentBgColorClass = section.dataset.color;
             }
         });
+    }
+
+    function handleScrollEvent() {
+        const scrollY = window.scrollY;
+
+        if (!ticking) {
+            window.requestAnimationFrame(() => {
+                updateBackgroundColor(scrollY);
+                handleScrollToTopVisibility(scrollY);
+                ticking = false;
+                scrollPosition = scrollY;
+            });
+            ticking = true;
+        }
+    }
+
+    function handleScrollToTopVisibility(scrollY) {
+        if (scrollY - scrollPosition < 0 && scrollPosition > 10) {
+            visibleScrollToTop = true;
+        } else {
+            visibleScrollToTop = false;
+        }
+    }
+
+    function scrollToTop() {
+        splashContainer.scrollIntoView({ behavior: "smooth" });
     }
 
     onMount(async () => {
@@ -99,15 +129,18 @@
     ></script>
 </svelte:head>
 
-<svelte:window
-    bind:innerWidth
-    bind:innerHeight
-    bind:scrollY={scrollPosition}
-    on:scroll={updateBackgroundColor}
-/>
+<svelte:window bind:innerWidth bind:innerHeight on:scroll={handleScrollEvent} />
+
+{#if visibleScrollToTop}
+    <button
+        transition:fade={{ duration: 300 }}
+        class="fixed bottom-4 right-4 z-20 inline-block h-12 w-12 rounded-xl bg-[#e40400] text-3xl text-beige no-underline backdrop-blur-md hover:brightness-100"
+        on:click={scrollToTop}>&#8963;</button
+    >
+{/if}
 
 <main class="transition-all duration-300 {currentBgColorClass} absolute w-full">
-    <div data-color="bg-beige">
+    <div data-color="bg-beige" bind:this={splashContainer}>
         <Splash title={metadata.title} subtitle={metadata.subtitle} loading={!dataLoaded} />
     </div>
 
