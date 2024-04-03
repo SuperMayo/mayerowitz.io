@@ -9,6 +9,7 @@
     import Tooltip from "./Tooltip.svelte";
 
     import type { AxisName, GearName, GearEnhanced } from "../lib/types";
+    import { derived } from "svelte/store";
 
     export let size: number = 200;
     export let showY: boolean = false;
@@ -25,6 +26,7 @@
     export let alpha = 0.5;
     export let ubar = 0.3;
     export let optimalGear: GearEnhanced[];
+    export let frontierSize = 100;
 
     // Sizes
     let width: number = size;
@@ -46,7 +48,9 @@
     let isAnimating = false;
     let focusArray = new Array($data.length);
     let mouse = { x: 0, y: 0 };
+    let frontier = derived(dataset, ($dataset) => $dataset.filter((d) => d.frontier > 0.9));
 
+    $: frontierSize = $frontier.length;
     $: leftMarginReactive = showY ? $marginScroll.left : $marginScroll.right;
     $: width = height = size;
     $: imgSize = size / 13;
@@ -173,7 +177,7 @@
     }
 
     function focusOnFrontier(): void {
-        const newFrontier = $dataset.filter((d) => d.frontier > 0.9).map((d) => d.name);
+        const newFrontier = $frontier.map((d) => d.name);
         setFocusWithWait(newFrontier);
     }
 

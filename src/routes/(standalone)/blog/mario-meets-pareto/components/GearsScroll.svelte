@@ -29,6 +29,7 @@
     let optimalGear: GearEnhanced[] = [];
     let index: number = 0;
     let fromIndexZero: boolean = false;
+    let frontierSize: number;
 
     const target2event: {
         [key: number]: () => void;
@@ -181,6 +182,12 @@
                     </select>
 
                     <br />
+                    {#if frontierSize == 1 && yAxis != xAxis}
+                        <p class="mt-1 rounded-lg border border-[#e40400] p-1">
+                            Well, well, it looks like you just found one of the rare cases where
+                            there's no trade-off!
+                        </p>
+                    {/if}
                     <button
                         on:click={() => {
                             gearType = "driver";
@@ -322,6 +329,7 @@
                     bind:optimalGear
                     bind:size={scatterWidth}
                     bind:showUtility
+                    bind:frontierSize
                 />
             {/if}
         </div>
