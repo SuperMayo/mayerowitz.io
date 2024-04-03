@@ -53,7 +53,7 @@
     }
 
     function updateBackgroundColor(scrollY) {
-        const threshold = 200;
+        const threshold = innerHeight / 2;
         const sections = document.querySelectorAll("[data-color]");
         sections.forEach((section) => {
             const sectionTop = section.offsetTop - threshold;
@@ -144,11 +144,11 @@
         <Splash title={metadata.title} subtitle={metadata.subtitle} loading={!dataLoaded} />
     </div>
 
-    <div data-color="bg-beige">
+    <div data-color="bg-beige" class="mb-[33vh]">
         <Introduction />
     </div>
 
-    <div data-color="bg-blue-800">
+    <div data-color="bg-blue-800" class="mb-[33vh]">
         <GearsScroll />
     </div>
 
