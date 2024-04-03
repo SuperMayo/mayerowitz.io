@@ -4,16 +4,16 @@
         ...siteMetadata,
         title: "Mario meets Pareto",
         slug: "mario-meets-pareto",
-        description: "Nintendo don't want you to know that",
+        description: "What Nintendo doesn't want you to know.",
         subtitle: "Step on the Front Line and Beat your Friends",
-        date: "2024-04-01",
+        date: "2024-04-05",
         readingTime: 20,
         category: "misc",
         tags: ["interactive"],
         published: false,
         customArticleStyle: false,
         SEO_description:
-            "What is the best build in Mario Kart 8 ? Explore multi-objective optimization with the Pareto frontier through a fun Mario Kart example. Understand trade-offs between speed, acceleration, handling, and more. Learn how the Pareto frontier helps make informed decisions by narrowing optimal choices.",
+            "Discover how to find the best Mario Kart 8 build using the Pareto frontier method. This interactive guide explores multi-objective optimization of speed, acceleration, and other key stats to help you beat your friends on the race track.",
     };
 </script>
 
