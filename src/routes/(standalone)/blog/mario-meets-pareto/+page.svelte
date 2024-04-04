@@ -180,8 +180,12 @@
             >? A flexible and strong material that's also easy to produce?
             <a href="https://academic.oup.com/restud/article-abstract/38/2/175/1527903">
                 A fair taxation that remains efficient</a
-            > ? In all these cases, you're facing a multi-objective optimization problem, and you have
-            to make trade-offs.
+            >
+            ?
+            <a href="https://artificialanalysis.ai/#summary"
+                >A high quality LLM that is also fast and cost-efficient</a
+            >. In all these cases, you're facing a multi-objective optimization problem, and you
+            have to make trade-offs.
         </p>
         <p>
             Of course, if you already know the exact weights you want to assign to each dimension
