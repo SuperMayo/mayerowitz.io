@@ -114,7 +114,8 @@ witness this.
             handleUpdateStats(bestId);
         },
         6: () => {
-            scatterComponent.moveCameraTo({ x: 45, y: 25, z: -10 }, 1000);
+            scatterComponent.moveCameraTo({ x: 45, y: 25, z: -10 }, 100);
+            scatterComponent.cameraZoom.set(zoomFactor, { duration: 100 });
             $clickedId = 4265;
             $hoveredId = 4265;
             handleClickedPoint(4265);
@@ -500,8 +501,7 @@ witness this.
                             loading="lazy"
                             class="mx-auto my-0 inline h-5 drop-shadow-lg"
                         />
-                        cloud glider. Unsurprisingly, the build sits right on our frontier when
-                        optimizing
+                        cloud glider. Unsurprisingly, the build sits right on our frontier when optimizing
                         <i>speed</i>, <i>acceleration</i>, and <i>mini turbo</i>.
                     </p>
                 </StepContent>

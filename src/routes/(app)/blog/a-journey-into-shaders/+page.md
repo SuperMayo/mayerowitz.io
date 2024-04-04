@@ -2,7 +2,7 @@
 title: "A Journey Into Shaders"
 slug: a-journey-into-shaders
 subtitle: "Part I: The blob"
-description: "Because you and I can't posptone learning shaders forever" 
+description: "Because you and I can't posptone learning shaders forever." 
 date: "2023-10-27"
 readingTime: 20
 category: "computer graphics"
