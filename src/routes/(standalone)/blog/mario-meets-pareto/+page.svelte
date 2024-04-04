@@ -10,7 +10,7 @@
         readingTime: 20,
         category: "misc",
         tags: ["interactive"],
-        published: false,
+        published: true,
         customArticleStyle: false,
         SEO_description:
             "Discover how to find the best Mario Kart 8 build using the Pareto frontier method. This interactive guide explores multi-objective optimization of speed, acceleration, and other key stats to help you beat your friends on the race track.",
