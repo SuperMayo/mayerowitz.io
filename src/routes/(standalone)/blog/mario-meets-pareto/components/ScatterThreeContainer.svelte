@@ -6,12 +6,13 @@ witness this.
 -->
 <script lang="ts">
     import { tweened } from "svelte/motion";
-    import { derived, get } from "svelte/store";
+    import { derived } from "svelte/store";
     import { cubicInOut, expoOut } from "svelte/easing";
     import { fade } from "svelte/transition";
     import Scroller from "@sveltejs/svelte-scroller";
     import { Canvas } from "@threlte/core";
     import { HTML } from "@threlte/extras";
+
     import DualSlider from "./DualSlider.svelte";
     import WeightBox from "./SVG/WeightBox.svelte";
 
@@ -122,17 +123,6 @@ witness this.
             handleAxisChange({ target: { dataset: { axis: "y" }, value: "acceleration" } });
             handleAxisChange({ target: { dataset: { axis: "z" }, value: "mini_turbo" } });
         },
-        //7: () => {
-        //    // Do not reset axis if you come back from (7)
-        //    if (indexHistory[1] == 5)
-        //        $clickedId = null;
-        //        $hoveredId = null;
-        //        handleClickedPoint(null);
-        //        handleAxisChange({ target: { dataset: { axis: "x" }, value: "handling" } });
-        //        handleAxisChange({ target: { dataset: { axis: "z" }, value: "off_road" } });
-        //    }
-        //    uniforms.focusFrontier.value = 1;
-        //},
     };
 
     const dataLoaded = derived(
@@ -485,33 +475,6 @@ witness this.
                     </p>
                 </StepContent>
             </section>
-            <!-- <section>
-                <StepContent>
-                    <p>
-                        If you are a new player however, optimizing on <select
-                            on:change={handleAxisChange}
-                            data-axis="x"
-                            bind:value={axis.x}
-                        >
-                            {#each $axisChoices as choice}
-                                <option value={choice.value}>{choice.name.toLowerCase()}</option>
-                            {/each}
-                        </select>
-                        <select on:change={handleAxisChange} data-axis="y" bind:value={axis.y}>
-                            {#each $axisChoices as choice}
-                                <option value={choice.value}>{choice.name.toLowerCase()}</option>
-                            {/each}
-                        </select>
-                        and
-                        <select on:change={handleAxisChange} data-axis="z" bind:value={axis.z}>
-                            {#each $axisChoices as choice}
-                                <option value={choice.value}>{choice.name.toLowerCase()}</option>
-                            {/each}
-                        </select>
-                        may turn more useful.
-                    </p>
-                </StepContent>
-            </section> -->
         </div>
     </Scroller>
 </div>
