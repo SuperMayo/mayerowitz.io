@@ -8,6 +8,7 @@
     export let animateBlink: boolean = false;
     export let imgArray: string[];
     export const animationDuration = 3000;
+    export let height = "40";
     let hueAngle: number;
     let nLoops: number = 0;
     let rndImg: string = icon;
@@ -31,7 +32,8 @@
 <div class="relative inline-flex text-center align-middle">
     {#if animateBlink == false || imgArray.length == 0}
         <img
-            class="h-[32px] w-auto contrast-0 md:h-[50px]"
+            class="h-10 w-auto contrast-0 md:h-[50px]"
+            {height}
             src={img_bucket + icon}
             alt={`Shape of a ${alt_type}`}
         />
