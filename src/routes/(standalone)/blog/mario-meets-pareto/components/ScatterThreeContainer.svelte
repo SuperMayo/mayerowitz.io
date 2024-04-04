@@ -13,6 +13,7 @@ witness this.
     import { Canvas } from "@threlte/core";
     import { HTML } from "@threlte/extras";
 
+    import { bucket } from "../store";
     import DualSlider from "./DualSlider.svelte";
     import WeightBox from "./SVG/WeightBox.svelte";
 
@@ -364,10 +365,11 @@ witness this.
             <section>
                 <StepContent>
                     <p>
-                        585 builds with unique speed and acceleration properties are available
-                        &mdash; tough decision for a player to make. But we can apply the same
-                        method as before. See, the Pareto front &mdash; in yellow &mdash; narrows it
-                        down to 14 efficient options!
+                        585 builds with unique <i>speed</i> and <i>acceleration</i> properties are
+                        available &mdash; tough decision for a player to make. But we can apply the
+                        same method as before. See, the
+                        <span class="bg-amber-400 px-1 text-beige">Pareto front</span>
+                        &mdash; in yellow &mdash; narrows it down to 14 efficient options!
                     </p>
                 </StepContent>
             </section>
@@ -469,9 +471,38 @@ witness this.
             <section>
                 <StepContent>
                     <p>
-                        Let's look at the build currently favored by top players. Unsurprisingly,
-                        the build sits right on our frontier when optimizing speed, acceleration,
-                        and mini turbo.
+                        Let's look at the build currently favored by top players &mdash; which is
+                        composed of
+                        <img
+                            src={$bucket + "/images/" + "64px-MK8_Peach_Icon.png"}
+                            alt="Peach"
+                            loading="lazy"
+                            class="mx-auto my-0 inline h-5 drop-shadow-lg"
+                        />
+                        Peach,
+                        <img
+                            src={$bucket + "/images/" + "100px-TeddyBuggyBodyMK8.png"}
+                            alt="Teddy Buggy"
+                            loading="lazy"
+                            class="mx-auto my-0 inline h-5 drop-shadow-lg"
+                        />
+                        Teddy Buggy, the
+                        <img
+                            src={$bucket + "/images/" + "100px-RollerTiresMK8.png"}
+                            alt="Roller tires"
+                            loading="lazy"
+                            class="mx-auto my-0 inline h-5 drop-shadow-lg"
+                        />
+                        roller tires, and the
+                        <img
+                            src={$bucket + "/images/" + "100px-Cloud_Glider.png"}
+                            alt="Cloud glider"
+                            loading="lazy"
+                            class="mx-auto my-0 inline h-5 drop-shadow-lg"
+                        />
+                        cloud glider. Unsurprisingly, the build sits right on our frontier when
+                        optimizing
+                        <i>speed</i>, <i>acceleration</i>, and <i>mini turbo</i>.
                     </p>
                 </StepContent>
             </section>
