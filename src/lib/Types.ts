@@ -9,6 +9,7 @@ export type BasePost = {
     published: boolean;
     external: false;
     standalone: boolean;
+    SEO_description: string;
 };
 
 export type ExternalPost = BasePost & {
@@ -17,4 +18,3 @@ export type ExternalPost = BasePost & {
 };
 
 export type Post = BasePost | ExternalPost;
-
