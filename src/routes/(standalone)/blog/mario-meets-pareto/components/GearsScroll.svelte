@@ -242,7 +242,7 @@
             </section>
             <section>
                 <StepContent>
-                    Mind you: all elements on the frontier are not equally good. You probably won't
+                    Mind you: not all elements of the frontier are equally good.. You probably won't
                     pick a driver sitting on the edge of the frontier because you want some balance
                     between <i>speed</i> and <i>acceleration</i>. The Pareto <i>efficiency</i> is an
                     objective criteria to filter out suboptimal choices, but you still need to make up
