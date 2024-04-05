@@ -9,7 +9,7 @@ const url = metadata.url;
 const author = metadata.author;
 const feedTitle = "Antoine Mayerowitz - Blog";
 const feedDescription = "It involves data.";
-const feedLink = url + "/rss.xml";
+const feedLink = url + "/rss";
 // Feed is rendered at build time
 const feedUpdated = new Date();
 
@@ -25,7 +25,7 @@ export const GET: RequestHandler = async (event) => {
 const xml = (posts: Post[]) => `<?xml version="1.0" encoding="utf-8"?>
   <feed xmlns="http://www.w3.org/2005/Atom">
     <title>${feedTitle}</title>
-    <link href="${feedLink}/rss.xml" rel="self"/>
+    <link href="${feedLink}" rel="self"/>
     <link href="${feedLink}"/>
     <id>${feedLink}/</id>
     <updated>${feedUpdated.toISOString()}</updated>
