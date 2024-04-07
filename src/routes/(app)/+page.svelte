@@ -21,7 +21,7 @@
         </p>
         <p>
             I'm an economist and data scientist, currently living in Paris, France. My interests
-            lies at the crossroad of data, interactivity, and art.
+            lies at the crossroads of data, interactivity, and art.
         </p>
         <p>
             You can also find me there (athough not very actively):
