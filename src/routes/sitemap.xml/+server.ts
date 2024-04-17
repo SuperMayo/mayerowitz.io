@@ -1,12 +1,16 @@
 import metadata from "$lib/data/metadata";
 export const prerender = true;
-
 const url = metadata.url;
 
 const staticPages = Object.keys(import.meta.glob("/src/routes/**/+page.(svelte|md)"))
     .filter((page) => !["/src/routes/+page.svelte"].find((filter) => page.includes(filter)))
     .map((page) =>
-        page.replace("/src/routes", url).replace("/+page.svelte", "").replace("/+page.md", ""),
+        page
+            .replace("/src/routes", url)
+            .replace("/+page.svelte", "")
+            .replace("/+page.md", "")
+            .replace("/(app)", "")
+            .replace("/(standalone)", ""),
     );
 
 export const GET = async (): Promise<Response> => {
@@ -27,16 +31,16 @@ export const GET = async (): Promise<Response> => {
 		<url>
 		  <loc>${url}</loc>
 		  <changefreq>weekly</changefreq>
-		  <priority>0.7</priority>
-		  <lastmod>${`${process.env.VITE_BUILD_TIME}`}</lastmod>
+		  <priority>0.8</priority>
+		  <lastmod>${new Date(VITE_BUILD_DATE).toISOString()}</lastmod>
 		</url>
 		${staticPages
             .map(
                 (url: string) => `<url>
 		  <loc>${url}</loc>
-		  <changefreq>daily</changefreq>
+		  <changefreq>weekly</changefreq>
 		  <priority>0.7</priority>
-		  <lastmod>${`${process.env.VITE_BUILD_TIME}`}</lastmod>
+		  <lastmod>${new Date(VITE_BUILD_DATE).toISOString()}</lastmod>
 		</url>`,
             )
             .join("")}
@@ -44,4 +48,3 @@ export const GET = async (): Promise<Response> => {
         { headers: headers },
     );
 };
-

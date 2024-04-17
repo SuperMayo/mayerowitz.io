@@ -10,4 +10,7 @@ export default defineConfig({
     ssr: {
         noExternal: ["three"],
     },
+    define: {
+        VITE_BUILD_DATE: new Date(),
+    },
 });
