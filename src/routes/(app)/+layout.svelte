@@ -10,7 +10,7 @@
         rel="alternate"
         type="application/rss+xml"
         title="RSS Feed for mayerowitz.io"
-        href="/rss"
+        href="/feed"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -31,4 +31,3 @@
     <slot />
     <Footer />
 </div>
-
