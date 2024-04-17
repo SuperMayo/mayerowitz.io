@@ -9,7 +9,7 @@ const url = metadata.url;
 const author = metadata.author;
 const feedTitle = "Antoine Mayerowitz";
 const feedDescription = "Latest articles by Antoine Mayerowitz";
-const feedLink = url + "/rss";
+const feedLink = url + "/feed";
 // Feed is rendered at build time
 const feedUpdated = new Date();
 
