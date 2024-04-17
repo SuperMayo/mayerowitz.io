@@ -11,4 +11,3 @@
         <a href="https://ko-fi.com/antoinemayerowitz">Support me</a>
     </div>
 </footer>
-
