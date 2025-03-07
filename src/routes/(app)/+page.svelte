@@ -21,10 +21,10 @@
         </p>
         <p>
             I'm an economist and data scientist, currently living in Paris, France. My interests
-            lies at the crossroads of data, interactivity, and art.
+            lie at the crossroads of data, interactivity, and art.
         </p>
         <p>
-            You can also find me there (athough not very actively):
+            You can also find me here (although not very actively):
             <br />
             {#each Object.entries(links) as [key, value], index (key)}
                 <a href={value} target="_blank">{key}</a
