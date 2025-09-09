@@ -1,4 +1,4 @@
-import type { Post } from "$lib/Types";
+import type { Post, ExternalPost } from "$lib/Types";
 import type { RequestHandler } from "@sveltejs/kit";
 
 import metadata from "$lib/data/metadata";
@@ -22,6 +22,18 @@ export const GET: RequestHandler = async (event) => {
     return newres;
 };
 
+function isExternal(post: Post): post is ExternalPost {
+    return (post as any).external === true;
+}
+
+function entryLink(post: Post): string {
+    return isExternal(post) ? post.externalUrl : `${url}/blog/${post.slug}`;
+}
+
+function entryId(post: Post): string {
+    return isExternal(post) ? post.externalUrl : `${url}/blog/${post.slug}/`;
+}
+
 const xml = (posts: Post[]) => `<?xml version="1.0" encoding="utf-8"?>
   <feed xmlns="http://www.w3.org/2005/Atom">
     <title>${feedTitle}</title>
@@ -39,8 +51,8 @@ ${posts
         (post: Post) =>
             `<entry>
         <title>${post.title}</title>
-        <link href="${url}/blog/${post.slug}"/>
-        <id>${url}/blog/${post.slug}/</id>
+        <link href="${entryLink(post)}"/>
+        <id>${entryId(post)}</id>
         <published>${new Date(post.date).toISOString()}</published>
         <updated>${new Date(post.date).toISOString()}</updated>
         <summary>${post.SEO_description}</summary>

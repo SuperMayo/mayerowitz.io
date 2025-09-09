@@ -1,29 +1,32 @@
 <script lang="ts">
     import { formatDate } from "$lib/utils";
-    export let data;
+    import type { Post, ExternalPost } from "$lib/Types";
+    export let data: { posts: Post[] };
 
-    function groupByYear(list: any[]) {
-        const groupedByYear = {};
+    function groupByYear(list: Post[]): Record<string, Post[]> {
+        const groupedByYear: Record<string, Post[]> = {};
 
         list.forEach((item) => {
-            // Extract the year from the date string
             const year = item.date.split("-")[0];
-            item.year = year;
-
-            // Initialize an array for the year if it doesn't already exist
             if (!groupedByYear[year]) {
                 groupedByYear[year] = [];
             }
-
-            // Append the current object to the array for its year
             groupedByYear[year].push(item);
         });
 
         return groupedByYear;
     }
 
-    const postsByYear = groupByYear(data.posts);
-    const sortedYears = Object.keys(postsByYear).sort((a, b) => b - a);
+    const postsByYear: Record<string, Post[]> = groupByYear(data.posts);
+    const sortedYears = Object.keys(postsByYear).sort((a, b) => Number(b) - Number(a));
+
+    function isExternal(post: Post): post is ExternalPost {
+        return (post as any).external === true;
+    }
+
+    function getHref(post: Post): string {
+        return isExternal(post) ? post.externalUrl : `blog/${post.slug}`;
+    }
 </script>
 
 <svelte:head>
@@ -36,7 +39,9 @@
         <h2 class="font-mono text-md md:text-xl">{year}</h2>
         {#each postsByYear[year] as post}
             <a
-                href={`blog/${post.slug}`}
+                href={getHref(post)}
+                target={isExternal(post) ? "_blank" : undefined}
+                rel={isExternal(post) ? "noopener noreferrer" : undefined}
                 data-sveltekit-reload={post.standalone}
                 class="
     text-black transition-all duration-300 ease-in-out hover:opacity-80"
