@@ -7,7 +7,7 @@ readingTime: 8
 category: "video games"
 tags: ["video games", "business", "data science"]
 published: true
-description: "A data-driven taxonomy of games scope. (On Substack)"
+description: "A data-driven taxonomy of game scopes. (On Substack)"
 SEO_description: |
     Instead of fuzzy labels like 'indie' and 'AA', I use a data-driven approach to classify video games based based on their actual scope.
 ---
