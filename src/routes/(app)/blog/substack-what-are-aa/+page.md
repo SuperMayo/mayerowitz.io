@@ -1,5 +1,5 @@
 ---
-title: "By the way, what are AA?"
+title: "By the way, what's a AA?"
 external: true
 externalUrl: "https://hushcrasher.substack.com/p/taxonomy-of-games"
 date: "2025-09-09"
