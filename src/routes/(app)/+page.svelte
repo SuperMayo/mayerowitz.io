@@ -1,11 +1,16 @@
-<script>
+<script lang="ts">
     import Blob from "$lib/Blob/Blob.svelte";
     import metadata from "$lib/data/metadata";
+    import type { Post, ExternalPost } from "$lib/Types";
     const links = metadata.externalLinks;
 
-    export let data;
+    export let data: { posts: Post[] };
 
-    const posts = data.posts;
+    const posts: Post[] = data.posts;
+
+    function isExternal(post: Post): post is ExternalPost {
+        return post.external === true;
+    }
 </script>
 
 <main class="mx-auto mt-one max-w-xl md:mt-five">
@@ -40,7 +45,9 @@
             <h4 class="m-0">Latest articles</h4>
             {#each posts as post}
                 <div>
-                    {#if post.standalone}
+                    {#if isExternal(post)}
+                        - <a href={post.externalUrl} target="_blank" rel="noopener noreferrer">{post.title}</a>
+                    {:else if post.standalone}
                         - <a data-sveltekit-reload href="/blog/{post.slug}">{post.title}</a>
                     {:else}
                         - <a href="/blog/{post.slug}">{post.title}</a>
