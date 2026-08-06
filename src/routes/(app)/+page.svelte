@@ -25,7 +25,7 @@
             >.
         </p>
         <p>
-            I'm an economist and data scientist, currently living in Paris, France. My interests
+            I'm an economist and data scientist, currently living in Paris, France. I'm the co-founder of <a href="https://hushcrasher.com/">Hushcrasher</a>. My interests
             lie at the crossroads of data, interactivity, and art.
         </p>
         <p>
