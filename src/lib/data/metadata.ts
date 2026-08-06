@@ -37,12 +37,12 @@ const description: string = `My personal site`;
 const author: string = `Antoine Mayerowitz`;
 const twitterUsername: string = `@AntoineMyrwtz`;
 const externalLinks: { [key: string]: string } = {
-    twitter: `https://twitter.com/AntoineMyrwtz`,
-    //  bluesky: `https://bsky.app/profile/antoine.mayerowitz.io`,
-    //  linkedin: `https://www.linkedin.com/in/antoinemayerowitz/`,
+    //twitter: `https://twitter.com/AntoineMyrwtz`,
+    bluesky: `https://bsky.app/profile/antoine.mayerowitz.io`,
+    linkedin: `https://www.linkedin.com/in/antoinemayerowitz/`,
     github: `https://github.com/SuperMayo`,
-    instagram: `https://www.instagram.com/super_mayo/`,
-    twitch: `https://www.twitch.tv/supermayotv`,
+    //instagram: `https://www.instagram.com/super_mayo/`,
+    //twitch: `https://www.twitch.tv/supermayotv`,
 };
 
 // Export
